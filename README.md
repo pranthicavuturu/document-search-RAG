@@ -10,3 +10,62 @@ This project allows users to search academic papers using vector similarity sear
 
 ## Setup Instructions
 
+# Project Checklist: AI Research Paper Search Engine
+
+## DATA
+
+- [ ] **Document Collection**
+  - [ ] Scrape papers from sources like AAAI, ICML, or arXiv.
+  - [ ] Store raw files in a consistent format (PDFs, text files).
+  - [ ] Extract text from raw files using libraries like PyPDF2 or pdfplumber.
+
+- [ ] **Text Cleaning**
+  - [ ] Normalize text (remove special characters, extra spaces, etc.).
+  - [ ] Organize into structured JSON or text files with fields like title, abstract, and content.
+
+## EMBEDDINGS
+
+- [ ] **Creative Approach for Embedding Generation**
+  - [ ] Use sentence-transformers to generate vector embeddings for documents.
+  - [ ] Save embeddings as a `.npy` file and maintain metadata (e.g., document IDs).
+
+## INDEX CREATION
+
+- [ ] **Build Approximate Nearest Neighbor (ANN) Index**
+  - [ ] Build an ANN index using FAISS.
+  - [ ] Test index accuracy with example queries.
+  - [ ] Prepare embeddings and index for use in the backend.
+
+## BACKEND
+
+- [ ] **API Development**
+  - [ ] Build an API for searching documents using the index.
+  - [ ] Define `/search/` endpoint: Accepts a query and returns top-k similar documents.
+  - [ ] Define `/health/` endpoint: Checks if the API is running.
+  - [ ] Connect the FAISS index to the API for real-time similarity search.
+  - [ ] Handle missing queries or invalid inputs gracefully.
+
+## FRONTEND
+
+- [ ] **User Interface Creation**
+  - [ ] Create input fields for search queries.
+  - [ ] Display results (e.g., titles, abstracts) in a clean layout.
+  - [ ] Fetch search results dynamically from the backend.
+  - [ ] Handle loading states and errors.
+
+## DEPLOYMENT
+
+- [ ] **Backend and Frontend Hosting**
+  - [ ] Deploy the FastAPI app using platforms like AWS, Render, or Heroku.
+  - [ ] Deploy the Streamlit app using Streamlit Cloud or similar platforms.
+  - [ ] Automate deployment with GitHub Actions or similar tools.
+  - [ ] Store large files (e.g., embeddings) in cloud storage like AWS S3.
+  - [ ] Should produce: Hosted backend and frontend URLs, CI/CD pipeline configuration.
+
+## DOCUMENTATION AND EXPECTATIONS
+
+- [ ] **Clear Documentation**
+  - [ ] Provide clear documentation of functions.
+  - [ ] Reasoning for all methods chosen.
+  - [ ] Print out loss (where applicable).
+
