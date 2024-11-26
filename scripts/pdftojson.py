@@ -2,6 +2,7 @@ import os
 import pdfplumber
 import json
 import re
+# import pymupdf/ pdfminer
 
 # Paths
 pdf_dir = "../collected-data/arxiv/pdf"
