@@ -1,8 +1,7 @@
 import os
-import pdfplumber
+import fitz  # PyMuPDF
 import json
 import re
-# import pymupdf/ pdfminer
 
 # Paths
 pdf_dir = "../collected-data/arxiv/pdf"
@@ -19,15 +18,13 @@ def extract_abstract_from_lines(lines):
     recording = False
 
     for line in lines:
-        # Start recording when "Abstract" is found
         if "abstract" in line.lower():
             recording = True
             continue
 
-        # Stop recording at delimiters like section headings or keywords
         if recording and (re.match(r"^\d+\.\s+[A-Z]", line) or "keywords" in line.lower()):
             break
-        
+
         if recording:
             abstract_lines.append(line.strip())
 
@@ -36,35 +33,34 @@ def extract_abstract_from_lines(lines):
 
 def extract_text_from_pdf(pdf_path):
     """
-    Extract text, title, and abstract from a PDF file.
+    Extract text, title, and abstract from a PDF file using PyMuPDF.
     """
     try:
-        with pdfplumber.open(pdf_path) as pdf:
-            # Extract text from the first page for title and abstract
-            first_page = pdf.pages[0]
-            text = first_page.extract_text()
-            
+        with fitz.open(pdf_path) as pdf:
+            first_page = pdf[0]
+            text = first_page.get_text("text")
+
             # Handle cases where the first page has no text
-            if not text:
+            if not text.strip():
                 print(f"Warning: No text found on the first page of {pdf_path}")
                 return None
-            
-            lines = text.split("\n")
 
-            # Extract title (assume first line is the title)
-            title = lines[0].strip() if lines else ""
+            lines = text.split("\n")
 
             # Extract abstract
             abstract = extract_abstract_from_lines(lines)
 
-            # Extract full text (all pages)
-            full_text = "\n".join([page.extract_text() for page in pdf.pages if page.extract_text()])
+            # Extract full text
+            full_text = ""
+            for page in pdf:
+                full_text += page.get_text("text") + "\n"
 
-            # Return the extracted components
+            title = os.path.basename(pdf_path).replace("_", " ").replace(".pdf", "")
+
             return {
-                "title": title or "",  # Leave empty if no title is identified
-                "abstract": abstract or "",  # Leave empty if no abstract is identified
-                "body": full_text,
+                "title": title.strip(),
+                "abstract": abstract or "",
+                "body": full_text.strip(),
                 "pdf_filename": os.path.basename(pdf_path)
             }
     except Exception as e:

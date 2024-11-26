@@ -9,7 +9,7 @@ st.title("Document Search")
 st.markdown("Search academic papers with an AI-powered system.")
 
 st.sidebar.header("Search Parameters")
-query = st.sidebar.text_input("Enter Search Query", "Deep Learning")
+query = st.sidebar.text_input("Enter Search Query", "")
 top_k = st.sidebar.slider("Number of Results", 1, 10, 5)
 
 if st.sidebar.button("Search"):
@@ -22,7 +22,7 @@ if st.sidebar.button("Search"):
                 for result in results:
                     st.markdown(
                         f"**Title**: {result['title']}  \n"
-                        f"**Abstract**: {result['abstract']}  \n"
+                        f"**Link**: {'<Link soon>'}  \n"
                         f"---"
                     )
             else:
