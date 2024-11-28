@@ -8,3 +8,5 @@ run in terminal using uvicorn api.main:app --reload
     --reload: Enables live reloading during development (helpful for debugging)  
 
 Go to http://127.0.0.1:8000/ to see home page. Other endpoints can be found in code.  
+
+Run using: uvicorn main:app --host 127.0.0.1 --port 8000
