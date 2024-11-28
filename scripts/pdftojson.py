@@ -60,7 +60,7 @@ def extract_text_from_pdf(pdf_path):
             return {
                 "title": title.strip(),
                 "abstract": abstract or "",
-                "body": full_text.strip(),
+                "content": full_text.strip(),
                 "pdf_filename": os.path.basename(pdf_path)
             }
     except Exception as e:

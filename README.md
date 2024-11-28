@@ -69,6 +69,11 @@ This project allows users to search academic papers using vector similarity sear
   - [ ] Reasoning for all methods chosen.
   - [ ] Print out loss (where applicable).
 
+## Add on's
+
+- [ ] https://projector.tensorflow.org/
+
+
 ## STEPS TO LAUNCH THE APP
 
 
