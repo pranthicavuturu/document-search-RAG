@@ -7,28 +7,23 @@ from sentence_transformers import SentenceTransformer
 
 app = FastAPI()
 
-# Directory containing the JSON files
 JSON_DIR = "../collected-data/arxiv/json"
 
-# Load metadata and FAISS index
 EMBEDDINGS_DIR = "../embeddings/embeddings_generated"
 FAISS_INDEX_PATH = "../embeddings/embeddings_generated/faiss_index.idx"
 EMBEDDING_MODEL_NAME = "all-MiniLM-L6-v2"
 
-# Load metadata
 try:
     with open(os.path.join(EMBEDDINGS_DIR, "paper_metadata.json"), "r", encoding="utf-8") as meta_file:
         metadata = json.load(meta_file)
 except Exception as e:
     raise RuntimeError(f"Error loading metadata: {e}")
 
-# Load FAISS index
 try:
     index = faiss.read_index(FAISS_INDEX_PATH)
 except Exception as e:
     raise RuntimeError(f"Error loading FAISS index: {e}")
 
-# Load embedding model
 embedding_model = SentenceTransformer(EMBEDDING_MODEL_NAME)
 
 @app.get("/")
@@ -51,13 +46,10 @@ def search(query: str, top_k: int = 5):
         raise HTTPException(status_code=400, detail="Query parameter is required.")
 
     try:
-        # Generate query embedding
         query_embedding = embedding_model.encode(query).astype("float32").reshape(1, -1)
 
-        # Search FAISS index
         distances, indices = index.search(query_embedding, top_k)
 
-        # Retrieve matching documents
         results = [
             {
                 "title": metadata[idx]["title"],
