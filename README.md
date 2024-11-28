@@ -1,5 +1,10 @@
 # document-search-RAG
 
+# Build and launch both Frontend and Backend on your local machine, use below command. It will take a few minutes, thats ok.
+
+docker-compose up --build
+
+
 ## Overview
 This project allows users to search academic papers using vector similarity search and embeddings.
 
