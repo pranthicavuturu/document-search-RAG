@@ -1,0 +1,792 @@
+[
+    {
+        "filename": "Scideator_Human-LLM_Scientific_Idea_Generation_Grounded_in_Research-Paper_Facet_Recombination.json",
+        "title": "Scideator Human-LLM Scientific Idea Generation Grounded in Research-Paper Facet Recombination",
+        "pdf_filename": "Scideator_Human-LLM_Scientific_Idea_Generation_Grounded_in_Research-Paper_Facet_Recombination.pdf"
+    },
+    {
+        "filename": "Contrast_Similarity-Aware_Dual-Pathway_Mamba_for_Multivariate_Time_Series_Node_Classification.json",
+        "title": "Contrast Similarity-Aware Dual-Pathway Mamba for Multivariate Time Series Node Classification",
+        "pdf_filename": "Contrast_Similarity-Aware_Dual-Pathway_Mamba_for_Multivariate_Time_Series_Node_Classification.pdf"
+    },
+    {
+        "filename": "Heuristic-Free_Multi-Teacher_Learning.json",
+        "title": "Heuristic-Free Multi-Teacher Learning",
+        "pdf_filename": "Heuristic-Free_Multi-Teacher_Learning.pdf"
+    },
+    {
+        "filename": "TFG_Unified_Training-Free_Guidance_for_Diffusion_Models.json",
+        "title": "TFG Unified Training-Free Guidance for Diffusion Models",
+        "pdf_filename": "TFG_Unified_Training-Free_Guidance_for_Diffusion_Models.pdf"
+    },
+    {
+        "filename": "When_Backdoors_Speak_Understanding_LLM_Backdoor_Attacks_Through_Model-Generated_Explanations.json",
+        "title": "When Backdoors Speak Understanding LLM Backdoor Attacks Through Model-Generated Explanations",
+        "pdf_filename": "When_Backdoors_Speak_Understanding_LLM_Backdoor_Attacks_Through_Model-Generated_Explanations.pdf"
+    },
+    {
+        "filename": "LUTMUL_Exceed_Conventional_FPGA_Roofline_Limit_by_LUT-based_Efficient_Multiplication_for_Neural_Netw.json",
+        "title": "LUTMUL Exceed Conventional FPGA Roofline Limit by LUT-based Efficient Multiplication for Neural Netw",
+        "pdf_filename": "LUTMUL_Exceed_Conventional_FPGA_Roofline_Limit_by_LUT-based_Efficient_Multiplication_for_Neural_Netw.pdf"
+    },
+    {
+        "filename": "Domain_Consistency_Representation_Learning_for_Lifelong_Person_Re-Identification.json",
+        "title": "Domain Consistency Representation Learning for Lifelong Person Re-Identification",
+        "pdf_filename": "Domain_Consistency_Representation_Learning_for_Lifelong_Person_Re-Identification.pdf"
+    },
+    {
+        "filename": "Provable_unlearning_in_topic_modeling_and_downstream_tasks.json",
+        "title": "Provable unlearning in topic modeling and downstream tasks",
+        "pdf_filename": "Provable_unlearning_in_topic_modeling_and_downstream_tasks.pdf"
+    },
+    {
+        "filename": "LLM4DS_Evaluating_Large_Language_Models_for_Data_Science_Code_Generation.json",
+        "title": "LLM4DS Evaluating Large Language Models for Data Science Code Generation",
+        "pdf_filename": "LLM4DS_Evaluating_Large_Language_Models_for_Data_Science_Code_Generation.pdf"
+    },
+    {
+        "filename": "Distill_the_Best,_Ignore_the_Rest_Improving_Dataset_Distillation_with_Loss-Value-Based_Pruning.json",
+        "title": "Distill the Best, Ignore the Rest Improving Dataset Distillation with Loss-Value-Based Pruning",
+        "pdf_filename": "Distill_the_Best,_Ignore_the_Rest_Improving_Dataset_Distillation_with_Loss-Value-Based_Pruning.pdf"
+    },
+    {
+        "filename": "STREAM_A_Universal_State-Space_Model_for_Sparse_Geometric_Data.json",
+        "title": "STREAM A Universal State-Space Model for Sparse Geometric Data",
+        "pdf_filename": "STREAM_A_Universal_State-Space_Model_for_Sparse_Geometric_Data.pdf"
+    },
+    {
+        "filename": "Sufficient_Invariant_Learning_for_Distribution_Shift.json",
+        "title": "Sufficient Invariant Learning for Distribution Shift",
+        "pdf_filename": "Sufficient_Invariant_Learning_for_Distribution_Shift.pdf"
+    },
+    {
+        "filename": "Do_LLMs_Understand_Ambiguity_in_Text_A_Case_Study_in_Open-world_Question_Answering.json",
+        "title": "Do LLMs Understand Ambiguity in Text A Case Study in Open-world Question Answering",
+        "pdf_filename": "Do_LLMs_Understand_Ambiguity_in_Text_A_Case_Study_in_Open-world_Question_Answering.pdf"
+    },
+    {
+        "filename": "Fast_Convergence_of_Softmax_Policy_Mirror_Ascent.json",
+        "title": "Fast Convergence of Softmax Policy Mirror Ascent",
+        "pdf_filename": "Fast_Convergence_of_Softmax_Policy_Mirror_Ascent.pdf"
+    },
+    {
+        "filename": "Leveraging_MLLM_Embeddings_and_Attribute_Smoothing_for_Compositional_Zero-Shot_Learning.json",
+        "title": "Leveraging MLLM Embeddings and Attribute Smoothing for Compositional Zero-Shot Learning",
+        "pdf_filename": "Leveraging_MLLM_Embeddings_and_Attribute_Smoothing_for_Compositional_Zero-Shot_Learning.pdf"
+    },
+    {
+        "filename": "SpikingNeRF_Making_Bio-inspired_Neural_Networks_See_through_the_Real_World.json",
+        "title": "SpikingNeRF Making Bio-inspired Neural Networks See through the Real World",
+        "pdf_filename": "SpikingNeRF_Making_Bio-inspired_Neural_Networks_See_through_the_Real_World.pdf"
+    },
+    {
+        "filename": "Backpropagation-Free_Multi-modal_On-Device_Model_Adaptation_via_Cloud-Device_Collaboration.json",
+        "title": "Backpropagation-Free Multi-modal On-Device Model Adaptation via Cloud-Device Collaboration",
+        "pdf_filename": "Backpropagation-Free_Multi-modal_On-Device_Model_Adaptation_via_Cloud-Device_Collaboration.pdf"
+    },
+    {
+        "filename": "A_Computational_Method_for_Measuring_Open_Codes_in_Qualitative_Analysis.json",
+        "title": "A Computational Method for Measuring Open Codes in Qualitative Analysis",
+        "pdf_filename": "A_Computational_Method_for_Measuring_Open_Codes_in_Qualitative_Analysis.pdf"
+    },
+    {
+        "filename": "The_Hermeneutic_Turn_of_AI_Is_the_Machine_Capable_of_Interpreting.json",
+        "title": "The Hermeneutic Turn of AI Is the Machine Capable of Interpreting",
+        "pdf_filename": "The_Hermeneutic_Turn_of_AI_Is_the_Machine_Capable_of_Interpreting.pdf"
+    },
+    {
+        "filename": "Visualizing_Loss_Functions_as_Topological_Landscape_Profiles.json",
+        "title": "Visualizing Loss Functions as Topological Landscape Profiles",
+        "pdf_filename": "Visualizing_Loss_Functions_as_Topological_Landscape_Profiles.pdf"
+    },
+    {
+        "filename": "Variable_Rate_Neural_Compression_for_Sparse_Detector_Data.json",
+        "title": "Variable Rate Neural Compression for Sparse Detector Data",
+        "pdf_filename": "Variable_Rate_Neural_Compression_for_Sparse_Detector_Data.pdf"
+    },
+    {
+        "filename": "Error-Feedback_Model_for_Output_Correction_in_Bilateral_Control-Based_Imitation_Learning.json",
+        "title": "Error-Feedback Model for Output Correction in Bilateral Control-Based Imitation Learning",
+        "pdf_filename": "Error-Feedback_Model_for_Output_Correction_in_Bilateral_Control-Based_Imitation_Learning.pdf"
+    },
+    {
+        "filename": "Vision-based_Manipulation_of_Transparent_Plastic_Bags_in_Industrial_Setups.json",
+        "title": "Vision-based Manipulation of Transparent Plastic Bags in Industrial Setups",
+        "pdf_filename": "Vision-based_Manipulation_of_Transparent_Plastic_Bags_in_Industrial_Setups.pdf"
+    },
+    {
+        "filename": "Deep_Learning-Driven_Heat_Map_Analysis_for_Evaluating_thickness_of_Wounded_Skin_Layers.json",
+        "title": "Deep Learning-Driven Heat Map Analysis for Evaluating thickness of Wounded Skin Layers",
+        "pdf_filename": "Deep_Learning-Driven_Heat_Map_Analysis_for_Evaluating_thickness_of_Wounded_Skin_Layers.pdf"
+    },
+    {
+        "filename": "A_Layered_Architecture_for_Developing_and_Enhancing_Capabilities_in_Large_Language_Model-based_Softw.json",
+        "title": "A Layered Architecture for Developing and Enhancing Capabilities in Large Language Model-based Softw",
+        "pdf_filename": "A_Layered_Architecture_for_Developing_and_Enhancing_Capabilities_in_Large_Language_Model-based_Softw.pdf"
+    },
+    {
+        "filename": "Topological_Symmetry_Enhanced_Graph_Convolution_for_Skeleton-Based_Action_Recognition.json",
+        "title": "Topological Symmetry Enhanced Graph Convolution for Skeleton-Based Action Recognition",
+        "pdf_filename": "Topological_Symmetry_Enhanced_Graph_Convolution_for_Skeleton-Based_Action_Recognition.pdf"
+    },
+    {
+        "filename": "Testability_of_Instrumental_Variables_in_Additive_Nonlinear,_Non-Constant_Effects_Models.json",
+        "title": "Testability of Instrumental Variables in Additive Nonlinear, Non-Constant Effects Models",
+        "pdf_filename": "Testability_of_Instrumental_Variables_in_Additive_Nonlinear,_Non-Constant_Effects_Models.pdf"
+    },
+    {
+        "filename": "Facial_Wrinkle_Segmentation_for_Cosmetic_Dermatology_Pretraining_with_Texture_Map-Based_Weak_Supervi.json",
+        "title": "Facial Wrinkle Segmentation for Cosmetic Dermatology Pretraining with Texture Map-Based Weak Supervi",
+        "pdf_filename": "Facial_Wrinkle_Segmentation_for_Cosmetic_Dermatology_Pretraining_with_Texture_Map-Based_Weak_Supervi.pdf"
+    },
+    {
+        "filename": "TSPRank_Bridging_Pairwise_and_Listwise_Methods_with_a_Bilinear_Travelling_Salesman_Model.json",
+        "title": "TSPRank Bridging Pairwise and Listwise Methods with a Bilinear Travelling Salesman Model",
+        "pdf_filename": "TSPRank_Bridging_Pairwise_and_Listwise_Methods_with_a_Bilinear_Travelling_Salesman_Model.pdf"
+    },
+    {
+        "filename": "SSEditor_Controllable_Mask-to-Scene_Generation_with_Diffusion_Model.json",
+        "title": "SSEditor Controllable Mask-to-Scene Generation with Diffusion Model",
+        "pdf_filename": "SSEditor_Controllable_Mask-to-Scene_Generation_with_Diffusion_Model.pdf"
+    },
+    {
+        "filename": "Zero-shot_LLM-guided_Counterfactual_Generation_A_Case_Study_on_NLP_Model_Evaluation.json",
+        "title": "Zero-shot LLM-guided Counterfactual Generation A Case Study on NLP Model Evaluation",
+        "pdf_filename": "Zero-shot_LLM-guided_Counterfactual_Generation_A_Case_Study_on_NLP_Model_Evaluation.pdf"
+    },
+    {
+        "filename": "A_Multi-Modal_Unsupervised_Machine_Learning_Approach_for_Biomedical_Signal_Processing_in_CPR.json",
+        "title": "A Multi-Modal Unsupervised Machine Learning Approach for Biomedical Signal Processing in CPR",
+        "pdf_filename": "A_Multi-Modal_Unsupervised_Machine_Learning_Approach_for_Biomedical_Signal_Processing_in_CPR.pdf"
+    },
+    {
+        "filename": "Chat_Bankman-Fried_an_Exploration_of_LLM_Alignment_in_Finance.json",
+        "title": "Chat Bankman-Fried an Exploration of LLM Alignment in Finance",
+        "pdf_filename": "Chat_Bankman-Fried_an_Exploration_of_LLM_Alignment_in_Finance.pdf"
+    },
+    {
+        "filename": "Enhanced_Sign_Language_Translation_between_American_Sign_Language_(ASL)_and_Indian_Sign_Language_(IS.json",
+        "title": "Enhanced Sign Language Translation between American Sign Language (ASL) and Indian Sign Language (IS",
+        "pdf_filename": "Enhanced_Sign_Language_Translation_between_American_Sign_Language_(ASL)_and_Indian_Sign_Language_(IS.pdf"
+    },
+    {
+        "filename": "Efficient_Training_in_Multi-Agent_Reinforcement_Learning_A_Communication-Free_Framework_for_the_Box-.json",
+        "title": "Efficient Training in Multi-Agent Reinforcement Learning A Communication-Free Framework for the Box-",
+        "pdf_filename": "Efficient_Training_in_Multi-Agent_Reinforcement_Learning_A_Communication-Free_Framework_for_the_Box-.pdf"
+    },
+    {
+        "filename": "Wavelets_Are_All_You_Need_for_Autoregressive_Image_Generation.json",
+        "title": "Wavelets Are All You Need for Autoregressive Image Generation",
+        "pdf_filename": "Wavelets_Are_All_You_Need_for_Autoregressive_Image_Generation.pdf"
+    },
+    {
+        "filename": "Thinking_Before_Looking_Improving_Multimodal_LLM_Reasoning_via_Mitigating_Visual_Hallucination.json",
+        "title": "Thinking Before Looking Improving Multimodal LLM Reasoning via Mitigating Visual Hallucination",
+        "pdf_filename": "Thinking_Before_Looking_Improving_Multimodal_LLM_Reasoning_via_Mitigating_Visual_Hallucination.pdf"
+    },
+    {
+        "filename": "Reference-free_Hallucination_Detection_for_Large_Vision-Language_Models.json",
+        "title": "Reference-free Hallucination Detection for Large Vision-Language Models",
+        "pdf_filename": "Reference-free_Hallucination_Detection_for_Large_Vision-Language_Models.pdf"
+    },
+    {
+        "filename": "Synergizing_LLM_Agents_and_Knowledge_Graph_for_Socioeconomic_Prediction_in_LBSN.json",
+        "title": "Synergizing LLM Agents and Knowledge Graph for Socioeconomic Prediction in LBSN",
+        "pdf_filename": "Synergizing_LLM_Agents_and_Knowledge_Graph_for_Socioeconomic_Prediction_in_LBSN.pdf"
+    },
+    {
+        "filename": "FedDCT_A_Dynamic_Cross-Tier_Federated_Learning_Framework_in_Wireless_Networks.json",
+        "title": "FedDCT A Dynamic Cross-Tier Federated Learning Framework in Wireless Networks",
+        "pdf_filename": "FedDCT_A_Dynamic_Cross-Tier_Federated_Learning_Framework_in_Wireless_Networks.pdf"
+    },
+    {
+        "filename": "T-GAE_Transferable_Graph_Autoencoder_for_Network_Alignment.json",
+        "title": "T-GAE Transferable Graph Autoencoder for Network Alignment",
+        "pdf_filename": "T-GAE_Transferable_Graph_Autoencoder_for_Network_Alignment.pdf"
+    },
+    {
+        "filename": "Vision-Language_Model_Fine-Tuning_via_Simple_Parameter-Efficient_Modification.json",
+        "title": "Vision-Language Model Fine-Tuning via Simple Parameter-Efficient Modification",
+        "pdf_filename": "Vision-Language_Model_Fine-Tuning_via_Simple_Parameter-Efficient_Modification.pdf"
+    },
+    {
+        "filename": "Green_My_LLM_Studying_the_key_factors_affecting_the_energy_consumption_of_code_assistants.json",
+        "title": "Green My LLM Studying the key factors affecting the energy consumption of code assistants",
+        "pdf_filename": "Green_My_LLM_Studying_the_key_factors_affecting_the_energy_consumption_of_code_assistants.pdf"
+    },
+    {
+        "filename": "BiSSL_Bilevel_Optimization_for_Self-Supervised_Pre-Training_and_Fine-Tuning.json",
+        "title": "BiSSL Bilevel Optimization for Self-Supervised Pre-Training and Fine-Tuning",
+        "pdf_filename": "BiSSL_Bilevel_Optimization_for_Self-Supervised_Pre-Training_and_Fine-Tuning.pdf"
+    },
+    {
+        "filename": "Enhancing_Low_Dose_Computed_Tomography_Images_Using_Consistency_Training_Techniques.json",
+        "title": "Enhancing Low Dose Computed Tomography Images Using Consistency Training Techniques",
+        "pdf_filename": "Enhancing_Low_Dose_Computed_Tomography_Images_Using_Consistency_Training_Techniques.pdf"
+    },
+    {
+        "filename": "Grading_and_Anomaly_Detection_for_Automated_Retinal_Image_Analysis_using_Deep_Learning.json",
+        "title": "Grading and Anomaly Detection for Automated Retinal Image Analysis using Deep Learning",
+        "pdf_filename": "Grading_and_Anomaly_Detection_for_Automated_Retinal_Image_Analysis_using_Deep_Learning.pdf"
+    },
+    {
+        "filename": "log-RRIM_Yield_Prediction_via_Local-to-global_Reaction_Representation_Learning_and_Interaction_Model.json",
+        "title": "log-RRIM Yield Prediction via Local-to-global Reaction Representation Learning and Interaction Model",
+        "pdf_filename": "log-RRIM_Yield_Prediction_via_Local-to-global_Reaction_Representation_Learning_and_Interaction_Model.pdf"
+    },
+    {
+        "filename": "Multi-Head_RAG_Solving_Multi-Aspect_Problems_with_LLMs.json",
+        "title": "Multi-Head RAG Solving Multi-Aspect Problems with LLMs",
+        "pdf_filename": "Multi-Head_RAG_Solving_Multi-Aspect_Problems_with_LLMs.pdf"
+    },
+    {
+        "filename": "F$^3$OCUS_--_Federated_Finetuning_of_Vision-Language_Foundation_Models_with_Optimal_Client_Layer_Upd.json",
+        "title": "F$^3$OCUS -- Federated Finetuning of Vision-Language Foundation Models with Optimal Client Layer Upd",
+        "pdf_filename": "F$^3$OCUS_--_Federated_Finetuning_of_Vision-Language_Foundation_Models_with_Optimal_Client_Layer_Upd.pdf"
+    },
+    {
+        "filename": "Reinforcement_Learning_with_Action_Sequence_for_Data-Efficient_Robot_Learning.json",
+        "title": "Reinforcement Learning with Action Sequence for Data-Efficient Robot Learning",
+        "pdf_filename": "Reinforcement_Learning_with_Action_Sequence_for_Data-Efficient_Robot_Learning.pdf"
+    },
+    {
+        "filename": "KTO_Model_Alignment_as_Prospect_Theoretic_Optimization.json",
+        "title": "KTO Model Alignment as Prospect Theoretic Optimization",
+        "pdf_filename": "KTO_Model_Alignment_as_Prospect_Theoretic_Optimization.pdf"
+    },
+    {
+        "filename": "CCIS-Diff_A_Generative_Model_with_Stable_Diffusion_Prior_for_Controlled_Colonoscopy_Image_Synthesis.json",
+        "title": "CCIS-Diff A Generative Model with Stable Diffusion Prior for Controlled Colonoscopy Image Synthesis",
+        "pdf_filename": "CCIS-Diff_A_Generative_Model_with_Stable_Diffusion_Prior_for_Controlled_Colonoscopy_Image_Synthesis.pdf"
+    },
+    {
+        "filename": "AI_Guided_Early_Screening_of_Cervical_Cancer.json",
+        "title": "AI Guided Early Screening of Cervical Cancer",
+        "pdf_filename": "AI_Guided_Early_Screening_of_Cervical_Cancer.pdf"
+    },
+    {
+        "filename": "Plurals_A_System_for_Guiding_LLMs_Via_Simulated_Social_Ensembles.json",
+        "title": "Plurals A System for Guiding LLMs Via Simulated Social Ensembles",
+        "pdf_filename": "Plurals_A_System_for_Guiding_LLMs_Via_Simulated_Social_Ensembles.pdf"
+    },
+    {
+        "filename": "DLBacktrace_A_Model_Agnostic_Explainability_for_any_Deep_Learning_Models.json",
+        "title": "DLBacktrace A Model Agnostic Explainability for any Deep Learning Models",
+        "pdf_filename": "DLBacktrace_A_Model_Agnostic_Explainability_for_any_Deep_Learning_Models.pdf"
+    },
+    {
+        "filename": "Brain-inspired_Computing_Based_on_Deep_Learning_for_Human-computer_Interaction_A_Review.json",
+        "title": "Brain-inspired Computing Based on Deep Learning for Human-computer Interaction A Review",
+        "pdf_filename": "Brain-inspired_Computing_Based_on_Deep_Learning_for_Human-computer_Interaction_A_Review.pdf"
+    },
+    {
+        "filename": "Reviving_Dormant_Memories_Investigating_Catastrophic_Forgetting_in_Language_Models_through_Rationale.json",
+        "title": "Reviving Dormant Memories Investigating Catastrophic Forgetting in Language Models through Rationale",
+        "pdf_filename": "Reviving_Dormant_Memories_Investigating_Catastrophic_Forgetting_in_Language_Models_through_Rationale.pdf"
+    },
+    {
+        "filename": "N-DriverMotion_Driver_motion_learning_and_prediction_using_an_event-based_camera_and_directly_traine.json",
+        "title": "N-DriverMotion Driver motion learning and prediction using an event-based camera and directly traine",
+        "pdf_filename": "N-DriverMotion_Driver_motion_learning_and_prediction_using_an_event-based_camera_and_directly_traine.pdf"
+    },
+    {
+        "filename": "A_More_Advanced_Group_Polarization_Measurement_Approach_Based_on_LLM-Based_Agents_and_Graphs.json",
+        "title": "A More Advanced Group Polarization Measurement Approach Based on LLM-Based Agents and Graphs",
+        "pdf_filename": "A_More_Advanced_Group_Polarization_Measurement_Approach_Based_on_LLM-Based_Agents_and_Graphs.pdf"
+    },
+    {
+        "filename": "AtomThink_A_Slow_Thinking_Framework_for_Multimodal_Mathematical_Reasoning.json",
+        "title": "AtomThink A Slow Thinking Framework for Multimodal Mathematical Reasoning",
+        "pdf_filename": "AtomThink_A_Slow_Thinking_Framework_for_Multimodal_Mathematical_Reasoning.pdf"
+    },
+    {
+        "filename": "METEOR_Evolutionary_Journey_of_Large_Language_Models_from_Guidance_to_Self-Growth.json",
+        "title": "METEOR Evolutionary Journey of Large Language Models from Guidance to Self-Growth",
+        "pdf_filename": "METEOR_Evolutionary_Journey_of_Large_Language_Models_from_Guidance_to_Self-Growth.pdf"
+    },
+    {
+        "filename": "Ergonomic_Design_of_Computer_Laboratory_Furniture_Mismatch_Analysis_Utilizing_Anthropometric_Data_of.json",
+        "title": "Ergonomic Design of Computer Laboratory Furniture Mismatch Analysis Utilizing Anthropometric Data of",
+        "pdf_filename": "Ergonomic_Design_of_Computer_Laboratory_Furniture_Mismatch_Analysis_Utilizing_Anthropometric_Data_of.pdf"
+    },
+    {
+        "filename": "SNN-Based_Online_Learning_of_Concepts_and_Action_Laws_in_an_Open_World.json",
+        "title": "SNN-Based Online Learning of Concepts and Action Laws in an Open World",
+        "pdf_filename": "SNN-Based_Online_Learning_of_Concepts_and_Action_Laws_in_an_Open_World.pdf"
+    },
+    {
+        "filename": "Newclid_A_User-Friendly_Replacement_for_AlphaGeometry.json",
+        "title": "Newclid A User-Friendly Replacement for AlphaGeometry",
+        "pdf_filename": "Newclid_A_User-Friendly_Replacement_for_AlphaGeometry.pdf"
+    },
+    {
+        "filename": "Look_Before_You_Decide_Prompting_Active_Deduction_of_MLLMs_for_Assumptive_Reasoning.json",
+        "title": "Look Before You Decide Prompting Active Deduction of MLLMs for Assumptive Reasoning",
+        "pdf_filename": "Look_Before_You_Decide_Prompting_Active_Deduction_of_MLLMs_for_Assumptive_Reasoning.pdf"
+    },
+    {
+        "filename": "ControlNet++_Improving_Conditional_Controls_with_Efficient_Consistency_Feedback.json",
+        "title": "ControlNet++ Improving Conditional Controls with Efficient Consistency Feedback",
+        "pdf_filename": "ControlNet++_Improving_Conditional_Controls_with_Efficient_Consistency_Feedback.pdf"
+    },
+    {
+        "filename": "On-Board_Vision-Language_Models_for_Personalized_Autonomous_Vehicle_Motion_Control_System_Design_and.json",
+        "title": "On-Board Vision-Language Models for Personalized Autonomous Vehicle Motion Control System Design and",
+        "pdf_filename": "On-Board_Vision-Language_Models_for_Personalized_Autonomous_Vehicle_Motion_Control_System_Design_and.pdf"
+    },
+    {
+        "filename": "Multi-LoRA_Composition_for_Image_Generation.json",
+        "title": "Multi-LoRA Composition for Image Generation",
+        "pdf_filename": "Multi-LoRA_Composition_for_Image_Generation.pdf"
+    },
+    {
+        "filename": "Is_Programming_by_Example_solved_by_LLMs.json",
+        "title": "Is Programming by Example solved by LLMs",
+        "pdf_filename": "Is_Programming_by_Example_solved_by_LLMs.pdf"
+    },
+    {
+        "filename": "CATCH_Complementary_Adaptive_Token-level_Contrastive_Decoding_to_Mitigate_Hallucinations_in_LVLMs.json",
+        "title": "CATCH Complementary Adaptive Token-level Contrastive Decoding to Mitigate Hallucinations in LVLMs",
+        "pdf_filename": "CATCH_Complementary_Adaptive_Token-level_Contrastive_Decoding_to_Mitigate_Hallucinations_in_LVLMs.pdf"
+    },
+    {
+        "filename": "Solving_Generalized_Grouping_Problems_in_Cellular_Manufacturing_Systems_Using_a_Network_Flow_Model.json",
+        "title": "Solving Generalized Grouping Problems in Cellular Manufacturing Systems Using a Network Flow Model",
+        "pdf_filename": "Solving_Generalized_Grouping_Problems_in_Cellular_Manufacturing_Systems_Using_a_Network_Flow_Model.pdf"
+    },
+    {
+        "filename": "Structured_Multi-Track_Accompaniment_Arrangement_via_Style_Prior_Modelling.json",
+        "title": "Structured Multi-Track Accompaniment Arrangement via Style Prior Modelling",
+        "pdf_filename": "Structured_Multi-Track_Accompaniment_Arrangement_via_Style_Prior_Modelling.pdf"
+    },
+    {
+        "filename": "Zoomed_In,_Diffused_Out_Towards_Local_Degradation-Aware_Multi-Diffusion_for_Extreme_Image_Super-Reso.json",
+        "title": "Zoomed In, Diffused Out Towards Local Degradation-Aware Multi-Diffusion for Extreme Image Super-Reso",
+        "pdf_filename": "Zoomed_In,_Diffused_Out_Towards_Local_Degradation-Aware_Multi-Diffusion_for_Extreme_Image_Super-Reso.pdf"
+    },
+    {
+        "filename": "AdaCM$^2$_On_Understanding_Extremely_Long-Term_Video_with_Adaptive_Cross-Modality_Memory_Reduction.json",
+        "title": "AdaCM$^2$ On Understanding Extremely Long-Term Video with Adaptive Cross-Modality Memory Reduction",
+        "pdf_filename": "AdaCM$^2$_On_Understanding_Extremely_Long-Term_Video_with_Adaptive_Cross-Modality_Memory_Reduction.pdf"
+    },
+    {
+        "filename": "Machine_Learning_Assisted_Postural_Movement_Recognition_using_Photoplethysmography(PPG).json",
+        "title": "Machine Learning Assisted Postural Movement Recognition using Photoplethysmography(PPG)",
+        "pdf_filename": "Machine_Learning_Assisted_Postural_Movement_Recognition_using_Photoplethysmography(PPG).pdf"
+    },
+    {
+        "filename": "Predicting_Customer_Satisfaction_by_Replicating_the_Survey_Response_Distribution.json",
+        "title": "Predicting Customer Satisfaction by Replicating the Survey Response Distribution",
+        "pdf_filename": "Predicting_Customer_Satisfaction_by_Replicating_the_Survey_Response_Distribution.pdf"
+    },
+    {
+        "filename": "ShiftAddLLM_Accelerating_Pretrained_LLMs_via_Post-Training_Multiplication-Less_Reparameterization.json",
+        "title": "ShiftAddLLM Accelerating Pretrained LLMs via Post-Training Multiplication-Less Reparameterization",
+        "pdf_filename": "ShiftAddLLM_Accelerating_Pretrained_LLMs_via_Post-Training_Multiplication-Less_Reparameterization.pdf"
+    },
+    {
+        "filename": "Enhancing_Multi-Class_Disease_Classification_Neoplasms,_Cardiovascular,_Nervous_System,_and_Digestiv.json",
+        "title": "Enhancing Multi-Class Disease Classification Neoplasms, Cardiovascular, Nervous System, and Digestiv",
+        "pdf_filename": "Enhancing_Multi-Class_Disease_Classification_Neoplasms,_Cardiovascular,_Nervous_System,_and_Digestiv.pdf"
+    },
+    {
+        "filename": "Whisper_Finetuning_on_Nepali_Language.json",
+        "title": "Whisper Finetuning on Nepali Language",
+        "pdf_filename": "Whisper_Finetuning_on_Nepali_Language.pdf"
+    },
+    {
+        "filename": "IDCIA_Immunocytochemistry_Dataset_for_Cellular_Image_Analysis.json",
+        "title": "IDCIA Immunocytochemistry Dataset for Cellular Image Analysis",
+        "pdf_filename": "IDCIA_Immunocytochemistry_Dataset_for_Cellular_Image_Analysis.pdf"
+    },
+    {
+        "filename": "UrbanDiT_A_Foundation_Model_for_Open-World_Urban_Spatio-Temporal_Learning.json",
+        "title": "UrbanDiT A Foundation Model for Open-World Urban Spatio-Temporal Learning",
+        "pdf_filename": "UrbanDiT_A_Foundation_Model_for_Open-World_Urban_Spatio-Temporal_Learning.pdf"
+    },
+    {
+        "filename": "Homeostatic_motion_planning_with_innate_physics_knowledge.json",
+        "title": "Homeostatic motion planning with innate physics knowledge",
+        "pdf_filename": "Homeostatic_motion_planning_with_innate_physics_knowledge.pdf"
+    },
+    {
+        "filename": "SkillTree_Explainable_Skill-Based_Deep_Reinforcement_Learning_for_Long-Horizon_Control_Tasks.json",
+        "title": "SkillTree Explainable Skill-Based Deep Reinforcement Learning for Long-Horizon Control Tasks",
+        "pdf_filename": "SkillTree_Explainable_Skill-Based_Deep_Reinforcement_Learning_for_Long-Horizon_Control_Tasks.pdf"
+    },
+    {
+        "filename": "Survey_on_Emotion_Recognition_through_Posture_Detection_and_the_possibility_of_its_application_in_Vi.json",
+        "title": "Survey on Emotion Recognition through Posture Detection and the possibility of its application in Vi",
+        "pdf_filename": "Survey_on_Emotion_Recognition_through_Posture_Detection_and_the_possibility_of_its_application_in_Vi.pdf"
+    },
+    {
+        "filename": "Retrieval-Augmented_Personalization_for_Multimodal_Large_Language_Models.json",
+        "title": "Retrieval-Augmented Personalization for Multimodal Large Language Models",
+        "pdf_filename": "Retrieval-Augmented_Personalization_for_Multimodal_Large_Language_Models.pdf"
+    },
+    {
+        "filename": "Rethinking_Top_Probability_from_Multi-view_for_Distracted_Driver_Behaviour_Localization.json",
+        "title": "Rethinking Top Probability from Multi-view for Distracted Driver Behaviour Localization",
+        "pdf_filename": "Rethinking_Top_Probability_from_Multi-view_for_Distracted_Driver_Behaviour_Localization.pdf"
+    },
+    {
+        "filename": "Unveiling_and_Mitigating_Bias_in_Large_Language_Model_Recommendations_A_Path_to_Fairness.json",
+        "title": "Unveiling and Mitigating Bias in Large Language Model Recommendations A Path to Fairness",
+        "pdf_filename": "Unveiling_and_Mitigating_Bias_in_Large_Language_Model_Recommendations_A_Path_to_Fairness.pdf"
+    },
+    {
+        "filename": "Improving_Multi-task_Learning_via_Seeking_Task-based_Flat_Regions.json",
+        "title": "Improving Multi-task Learning via Seeking Task-based Flat Regions",
+        "pdf_filename": "Improving_Multi-task_Learning_via_Seeking_Task-based_Flat_Regions.pdf"
+    },
+    {
+        "filename": "Combining_Induction_and_Transduction_for_Abstract_Reasoning.json",
+        "title": "Combining Induction and Transduction for Abstract Reasoning",
+        "pdf_filename": "Combining_Induction_and_Transduction_for_Abstract_Reasoning.pdf"
+    },
+    {
+        "filename": "Restructuring_Tractable_Probabilistic_Circuits.json",
+        "title": "Restructuring Tractable Probabilistic Circuits",
+        "pdf_filename": "Restructuring_Tractable_Probabilistic_Circuits.pdf"
+    },
+    {
+        "filename": "Benchmarking_pre-trained_text_embedding_models_in_aligning_built_asset_information.json",
+        "title": "Benchmarking pre-trained text embedding models in aligning built asset information",
+        "pdf_filename": "Benchmarking_pre-trained_text_embedding_models_in_aligning_built_asset_information.pdf"
+    },
+    {
+        "filename": "ULTra_Unveiling_Latent_Token_Interpretability_in_Transformer_Based_Understanding.json",
+        "title": "ULTra Unveiling Latent Token Interpretability in Transformer Based Understanding",
+        "pdf_filename": "ULTra_Unveiling_Latent_Token_Interpretability_in_Transformer_Based_Understanding.pdf"
+    },
+    {
+        "filename": "Survey_on_Semantic_Interpretation_of_Tabular_Data_Challenges_and_Directions.json",
+        "title": "Survey on Semantic Interpretation of Tabular Data Challenges and Directions",
+        "pdf_filename": "Survey_on_Semantic_Interpretation_of_Tabular_Data_Challenges_and_Directions.pdf"
+    },
+    {
+        "filename": "Preference-Conditioned_Gradient_Variations_for_Multi-Objective_Quality-Diversity.json",
+        "title": "Preference-Conditioned Gradient Variations for Multi-Objective Quality-Diversity",
+        "pdf_filename": "Preference-Conditioned_Gradient_Variations_for_Multi-Objective_Quality-Diversity.pdf"
+    },
+    {
+        "filename": "Just_Leaf_It_Accelerating_Diffusion_Classifiers_with_Hierarchical_Class_Pruning.json",
+        "title": "Just Leaf It Accelerating Diffusion Classifiers with Hierarchical Class Pruning",
+        "pdf_filename": "Just_Leaf_It_Accelerating_Diffusion_Classifiers_with_Hierarchical_Class_Pruning.pdf"
+    },
+    {
+        "filename": "ACING_Actor-Critic_for_Instruction_Learning_in_Black-Box_Large_Language_Models.json",
+        "title": "ACING Actor-Critic for Instruction Learning in Black-Box Large Language Models",
+        "pdf_filename": "ACING_Actor-Critic_for_Instruction_Learning_in_Black-Box_Large_Language_Models.pdf"
+    },
+    {
+        "filename": "Attribute_Inference_Attacks_for_Federated_Regression_Tasks.json",
+        "title": "Attribute Inference Attacks for Federated Regression Tasks",
+        "pdf_filename": "Attribute_Inference_Attacks_for_Federated_Regression_Tasks.pdf"
+    },
+    {
+        "filename": "Understanding_Chain-of-Thought_in_LLMs_through_Information_Theory.json",
+        "title": "Understanding Chain-of-Thought in LLMs through Information Theory",
+        "pdf_filename": "Understanding_Chain-of-Thought_in_LLMs_through_Information_Theory.pdf"
+    },
+    {
+        "filename": "The_Role_of_Accuracy_and_Validation_Effectiveness_in_Conversational_Business_Analytics.json",
+        "title": "The Role of Accuracy and Validation Effectiveness in Conversational Business Analytics",
+        "pdf_filename": "The_Role_of_Accuracy_and_Validation_Effectiveness_in_Conversational_Business_Analytics.pdf"
+    },
+    {
+        "filename": "Contextual_Combinatorial_Bandits_with_Probabilistically_Triggered_Arms.json",
+        "title": "Contextual Combinatorial Bandits with Probabilistically Triggered Arms",
+        "pdf_filename": "Contextual_Combinatorial_Bandits_with_Probabilistically_Triggered_Arms.pdf"
+    },
+    {
+        "filename": "Fingerprinting_and_Tracing_Shadows_The_Development_and_Impact_of_Browser_Fingerprinting_on_Digital_P.json",
+        "title": "Fingerprinting and Tracing Shadows The Development and Impact of Browser Fingerprinting on Digital P",
+        "pdf_filename": "Fingerprinting_and_Tracing_Shadows_The_Development_and_Impact_of_Browser_Fingerprinting_on_Digital_P.pdf"
+    },
+    {
+        "filename": "Interpretable_Fusion_Analytics_Framework_for_fMRI_Connectivity_Self-Attention_Mechanism_and_Latent_S.json",
+        "title": "Interpretable Fusion Analytics Framework for fMRI Connectivity Self-Attention Mechanism and Latent S",
+        "pdf_filename": "Interpretable_Fusion_Analytics_Framework_for_fMRI_Connectivity_Self-Attention_Mechanism_and_Latent_S.pdf"
+    },
+    {
+        "filename": "Recall_and_Refine_A_Simple_but_Effective_Source-free_Open-set_Domain_Adaptation_Framework.json",
+        "title": "Recall and Refine A Simple but Effective Source-free Open-set Domain Adaptation Framework",
+        "pdf_filename": "Recall_and_Refine_A_Simple_but_Effective_Source-free_Open-set_Domain_Adaptation_Framework.pdf"
+    },
+    {
+        "filename": "CodeXEmbed_A_Generalist_Embedding_Model_Family_for_Multiligual_and_Multi-task_Code_Retrieval.json",
+        "title": "CodeXEmbed A Generalist Embedding Model Family for Multiligual and Multi-task Code Retrieval",
+        "pdf_filename": "CodeXEmbed_A_Generalist_Embedding_Model_Family_for_Multiligual_and_Multi-task_Code_Retrieval.pdf"
+    },
+    {
+        "filename": "Medical_Video_Generation_for_Disease_Progression_Simulation.json",
+        "title": "Medical Video Generation for Disease Progression Simulation",
+        "pdf_filename": "Medical_Video_Generation_for_Disease_Progression_Simulation.pdf"
+    },
+    {
+        "filename": "HNCSE_Advancing_Sentence_Embeddings_via_Hybrid_Contrastive_Learning_with_Hard_Negatives.json",
+        "title": "HNCSE Advancing Sentence Embeddings via Hybrid Contrastive Learning with Hard Negatives",
+        "pdf_filename": "HNCSE_Advancing_Sentence_Embeddings_via_Hybrid_Contrastive_Learning_with_Hard_Negatives.pdf"
+    },
+    {
+        "filename": "Rethinking_cluster-conditioned_diffusion_models_for_label-free_image_synthesis.json",
+        "title": "Rethinking cluster-conditioned diffusion models for label-free image synthesis",
+        "pdf_filename": "Rethinking_cluster-conditioned_diffusion_models_for_label-free_image_synthesis.pdf"
+    },
+    {
+        "filename": "Guide-to-Explain_for_Controllable_Summarization.json",
+        "title": "Guide-to-Explain for Controllable Summarization",
+        "pdf_filename": "Guide-to-Explain_for_Controllable_Summarization.pdf"
+    },
+    {
+        "filename": "HEIGHT_Heterogeneous_Interaction_Graph_Transformer_for_Robot_Navigation_in_Crowded_and_Constrained_E.json",
+        "title": "HEIGHT Heterogeneous Interaction Graph Transformer for Robot Navigation in Crowded and Constrained E",
+        "pdf_filename": "HEIGHT_Heterogeneous_Interaction_Graph_Transformer_for_Robot_Navigation_in_Crowded_and_Constrained_E.pdf"
+    },
+    {
+        "filename": "Can_EDA_Tool_Feedback_Improve_Verilog_Generation_by_LLMs.json",
+        "title": "Can EDA Tool Feedback Improve Verilog Generation by LLMs",
+        "pdf_filename": "Can_EDA_Tool_Feedback_Improve_Verilog_Generation_by_LLMs.pdf"
+    },
+    {
+        "filename": "Weak-to-Strong_Search_Align_Large_Language_Models_via_Searching_over_Small_Language_Models.json",
+        "title": "Weak-to-Strong Search Align Large Language Models via Searching over Small Language Models",
+        "pdf_filename": "Weak-to-Strong_Search_Align_Large_Language_Models_via_Searching_over_Small_Language_Models.pdf"
+    },
+    {
+        "filename": "PLA4D_Pixel-Level_Alignments_for_Text-to-4D_Gaussian_Splatting.json",
+        "title": "PLA4D Pixel-Level Alignments for Text-to-4D Gaussian Splatting",
+        "pdf_filename": "PLA4D_Pixel-Level_Alignments_for_Text-to-4D_Gaussian_Splatting.pdf"
+    },
+    {
+        "filename": "From_Text_to_Multimodality_Exploring_the_Evolution_and_Impact_of_Large_Language_Models_in_Medical_Pr.json",
+        "title": "From Text to Multimodality Exploring the Evolution and Impact of Large Language Models in Medical Pr",
+        "pdf_filename": "From_Text_to_Multimodality_Exploring_the_Evolution_and_Impact_of_Large_Language_Models_in_Medical_Pr.pdf"
+    },
+    {
+        "filename": "AI_Flow_at_the_Network_Edge.json",
+        "title": "AI Flow at the Network Edge",
+        "pdf_filename": "AI_Flow_at_the_Network_Edge.pdf"
+    },
+    {
+        "filename": "RLtools_A_Fast,_Portable_Deep_Reinforcement_Learning_Library_for_Continuous_Control.json",
+        "title": "RLtools A Fast, Portable Deep Reinforcement Learning Library for Continuous Control",
+        "pdf_filename": "RLtools_A_Fast,_Portable_Deep_Reinforcement_Learning_Library_for_Continuous_Control.pdf"
+    },
+    {
+        "filename": "On_Size_and_Hardness_Generalization_in_Unsupervised_Learning_for_the_Travelling_Salesman_Problem.json",
+        "title": "On Size and Hardness Generalization in Unsupervised Learning for the Travelling Salesman Problem",
+        "pdf_filename": "On_Size_and_Hardness_Generalization_in_Unsupervised_Learning_for_the_Travelling_Salesman_Problem.pdf"
+    },
+    {
+        "filename": "libcll_an_Extendable_Python_Toolkit_for_Complementary-Label_Learning.json",
+        "title": "libcll an Extendable Python Toolkit for Complementary-Label Learning",
+        "pdf_filename": "libcll_an_Extendable_Python_Toolkit_for_Complementary-Label_Learning.pdf"
+    },
+    {
+        "filename": "Neurosymbolic_Graph_Enrichment_for_Grounded_World_Models.json",
+        "title": "Neurosymbolic Graph Enrichment for Grounded World Models",
+        "pdf_filename": "Neurosymbolic_Graph_Enrichment_for_Grounded_World_Models.pdf"
+    },
+    {
+        "filename": "Optimizing_Airline_Reservation_Systems_with_Edge-Enabled_Microservices_A_Framework_for_Real-Time_Dat.json",
+        "title": "Optimizing Airline Reservation Systems with Edge-Enabled Microservices A Framework for Real-Time Dat",
+        "pdf_filename": "Optimizing_Airline_Reservation_Systems_with_Edge-Enabled_Microservices_A_Framework_for_Real-Time_Dat.pdf"
+    },
+    {
+        "filename": "Evaluating_Tokenizer_Performance_of_Large_Language_Models_Across_Official_Indian_Languages.json",
+        "title": "Evaluating Tokenizer Performance of Large Language Models Across Official Indian Languages",
+        "pdf_filename": "Evaluating_Tokenizer_Performance_of_Large_Language_Models_Across_Official_Indian_Languages.pdf"
+    },
+    {
+        "filename": "PoM_Efficient_Image_and_Video_Generation_with_the_Polynomial_Mixer.json",
+        "title": "PoM Efficient Image and Video Generation with the Polynomial Mixer",
+        "pdf_filename": "PoM_Efficient_Image_and_Video_Generation_with_the_Polynomial_Mixer.pdf"
+    },
+    {
+        "filename": "Balancing_Accuracy_and_Efficiency_in_Multi-Turn_Intent_Classification_for_LLM-Powered_Dialog_Systems.json",
+        "title": "Balancing Accuracy and Efficiency in Multi-Turn Intent Classification for LLM-Powered Dialog Systems",
+        "pdf_filename": "Balancing_Accuracy_and_Efficiency_in_Multi-Turn_Intent_Classification_for_LLM-Powered_Dialog_Systems.pdf"
+    },
+    {
+        "filename": "S-HR-VQVAE_Sequential_Hierarchical_Residual_Learning_Vector_Quantized_Variational_Autoencoder_for_Vi.json",
+        "title": "S-HR-VQVAE Sequential Hierarchical Residual Learning Vector Quantized Variational Autoencoder for Vi",
+        "pdf_filename": "S-HR-VQVAE_Sequential_Hierarchical_Residual_Learning_Vector_Quantized_Variational_Autoencoder_for_Vi.pdf"
+    },
+    {
+        "filename": "ModeSeq_Taming_Sparse_Multimodal_Motion_Prediction_with_Sequential_Mode_Modeling.json",
+        "title": "ModeSeq Taming Sparse Multimodal Motion Prediction with Sequential Mode Modeling",
+        "pdf_filename": "ModeSeq_Taming_Sparse_Multimodal_Motion_Prediction_with_Sequential_Mode_Modeling.pdf"
+    },
+    {
+        "filename": "TS-ACL_A_Time_Series_Analytic_Continual_Learning_Framework_for_Privacy-Preserving_and_Class-Incremen.json",
+        "title": "TS-ACL A Time Series Analytic Continual Learning Framework for Privacy-Preserving and Class-Incremen",
+        "pdf_filename": "TS-ACL_A_Time_Series_Analytic_Continual_Learning_Framework_for_Privacy-Preserving_and_Class-Incremen.pdf"
+    },
+    {
+        "filename": "Transformer_Neural_Processes_--_Kernel_Regression.json",
+        "title": "Transformer Neural Processes -- Kernel Regression",
+        "pdf_filename": "Transformer_Neural_Processes_--_Kernel_Regression.pdf"
+    },
+    {
+        "filename": "Diffusion-Inspired_Cold_Start_with_Sufficient_Prior_in_Computerized_Adaptive_Testing.json",
+        "title": "Diffusion-Inspired Cold Start with Sufficient Prior in Computerized Adaptive Testing",
+        "pdf_filename": "Diffusion-Inspired_Cold_Start_with_Sufficient_Prior_in_Computerized_Adaptive_Testing.pdf"
+    },
+    {
+        "filename": "Key-Element-Informed_sLLM_Tuning_for_Document_Summarization.json",
+        "title": "Key-Element-Informed sLLM Tuning for Document Summarization",
+        "pdf_filename": "Key-Element-Informed_sLLM_Tuning_for_Document_Summarization.pdf"
+    },
+    {
+        "filename": "Regulating_Chatbot_Output_via_Inter-Informational_Competition.json",
+        "title": "Regulating Chatbot Output via Inter-Informational Competition",
+        "pdf_filename": "Regulating_Chatbot_Output_via_Inter-Informational_Competition.pdf"
+    },
+    {
+        "filename": "Can_Agents_Spontaneously_Form_a_Society_Introducing_a_Novel_Architecture_for_Generative_Multi-Agents.json",
+        "title": "Can Agents Spontaneously Form a Society Introducing a Novel Architecture for Generative Multi-Agents",
+        "pdf_filename": "Can_Agents_Spontaneously_Form_a_Society_Introducing_a_Novel_Architecture_for_Generative_Multi-Agents.pdf"
+    },
+    {
+        "filename": "Value_Imprint_A_Technique_for_Auditing_the_Human_Values_Embedded_in_RLHF_Datasets.json",
+        "title": "Value Imprint A Technique for Auditing the Human Values Embedded in RLHF Datasets",
+        "pdf_filename": "Value_Imprint_A_Technique_for_Auditing_the_Human_Values_Embedded_in_RLHF_Datasets.pdf"
+    },
+    {
+        "filename": "Xmodel-LM_Technical_Report.json",
+        "title": "Xmodel-LM Technical Report",
+        "pdf_filename": "Xmodel-LM_Technical_Report.pdf"
+    },
+    {
+        "filename": "DeTrigger_A_Gradient-Centric_Approach_to_Backdoor_Attack_Mitigation_in_Federated_Learning.json",
+        "title": "DeTrigger A Gradient-Centric Approach to Backdoor Attack Mitigation in Federated Learning",
+        "pdf_filename": "DeTrigger_A_Gradient-Centric_Approach_to_Backdoor_Attack_Mitigation_in_Federated_Learning.pdf"
+    },
+    {
+        "filename": "AI's_Spatial_Intelligence_Evaluating_AI's_Understanding_of_Spatial_Transformations_in_PSVTR_and_Augm.json",
+        "title": "AI's Spatial Intelligence Evaluating AI's Understanding of Spatial Transformations in PSVTR and Augm",
+        "pdf_filename": "AI's_Spatial_Intelligence_Evaluating_AI's_Understanding_of_Spatial_Transformations_in_PSVTR_and_Augm.pdf"
+    },
+    {
+        "filename": "Exploring_Optimal_Transport-Based_Multi-Grained_Alignments_for_Text-Molecule_Retrieval.json",
+        "title": "Exploring Optimal Transport-Based Multi-Grained Alignments for Text-Molecule Retrieval",
+        "pdf_filename": "Exploring_Optimal_Transport-Based_Multi-Grained_Alignments_for_Text-Molecule_Retrieval.pdf"
+    },
+    {
+        "filename": "CRoP_Context-wise_Robust_Static_Human-Sensing_Personalization.json",
+        "title": "CRoP Context-wise Robust Static Human-Sensing Personalization",
+        "pdf_filename": "CRoP_Context-wise_Robust_Static_Human-Sensing_Personalization.pdf"
+    },
+    {
+        "filename": "Different_Horses_for_Different_Courses_Comparing_Bias_Mitigation_Algorithms_in_ML.json",
+        "title": "Different Horses for Different Courses Comparing Bias Mitigation Algorithms in ML",
+        "pdf_filename": "Different_Horses_for_Different_Courses_Comparing_Bias_Mitigation_Algorithms_in_ML.pdf"
+    },
+    {
+        "filename": "Regret-Free_Reinforcement_Learning_for_LTL_Specifications.json",
+        "title": "Regret-Free Reinforcement Learning for LTL Specifications",
+        "pdf_filename": "Regret-Free_Reinforcement_Learning_for_LTL_Specifications.pdf"
+    },
+    {
+        "filename": "Estimating_Dark_Matter_Halo_Masses_in_Simulated_Galaxy_Clusters_with_Graph_Neural_Networks.json",
+        "title": "Estimating Dark Matter Halo Masses in Simulated Galaxy Clusters with Graph Neural Networks",
+        "pdf_filename": "Estimating_Dark_Matter_Halo_Masses_in_Simulated_Galaxy_Clusters_with_Graph_Neural_Networks.pdf"
+    },
+    {
+        "filename": "Analysing_Explanation-Related_Interactions_in_Collaborative_Perception-Cognition-Communication-Actio.json",
+        "title": "Analysing Explanation-Related Interactions in Collaborative Perception-Cognition-Communication-Actio",
+        "pdf_filename": "Analysing_Explanation-Related_Interactions_in_Collaborative_Perception-Cognition-Communication-Actio.pdf"
+    },
+    {
+        "filename": "Designing_Multi-layered_Runtime_Guardrails_for_Foundation_Model_Based_Agents_Swiss_Cheese_Model_for_.json",
+        "title": "Designing Multi-layered Runtime Guardrails for Foundation Model Based Agents Swiss Cheese Model for",
+        "pdf_filename": "Designing_Multi-layered_Runtime_Guardrails_for_Foundation_Model_Based_Agents_Swiss_Cheese_Model_for_.pdf"
+    },
+    {
+        "filename": "VidComposition_Can_MLLMs_Analyze_Compositions_in_Compiled_Videos.json",
+        "title": "VidComposition Can MLLMs Analyze Compositions in Compiled Videos",
+        "pdf_filename": "VidComposition_Can_MLLMs_Analyze_Compositions_in_Compiled_Videos.pdf"
+    },
+    {
+        "filename": "Evaluating_the_Prompt_Steerability_of_Large_Language_Models.json",
+        "title": "Evaluating the Prompt Steerability of Large Language Models",
+        "pdf_filename": "Evaluating_the_Prompt_Steerability_of_Large_Language_Models.pdf"
+    },
+    {
+        "filename": "ResLearn_Transformer-based_Residual_Learning_for_Metaverse_Network_Traffic_Prediction.json",
+        "title": "ResLearn Transformer-based Residual Learning for Metaverse Network Traffic Prediction",
+        "pdf_filename": "ResLearn_Transformer-based_Residual_Learning_for_Metaverse_Network_Traffic_Prediction.pdf"
+    },
+    {
+        "filename": "ByteScience_Bridging_Unstructured_Scientific_Literature_and_Structured_Data_with_Auto_Fine-tuned_Lar.json",
+        "title": "ByteScience Bridging Unstructured Scientific Literature and Structured Data with Auto Fine-tuned Lar",
+        "pdf_filename": "ByteScience_Bridging_Unstructured_Scientific_Literature_and_Structured_Data_with_Auto_Fine-tuned_Lar.pdf"
+    },
+    {
+        "filename": "Comparing_Prior_and_Learned_Time_Representations_in_Transformer_Models_of_Timeseries.json",
+        "title": "Comparing Prior and Learned Time Representations in Transformer Models of Timeseries",
+        "pdf_filename": "Comparing_Prior_and_Learned_Time_Representations_in_Transformer_Models_of_Timeseries.pdf"
+    },
+    {
+        "filename": "Signaling_and_Social_Learning_in_Swarms_of_Robots.json",
+        "title": "Signaling and Social Learning in Swarms of Robots",
+        "pdf_filename": "Signaling_and_Social_Learning_in_Swarms_of_Robots.pdf"
+    },
+    {
+        "filename": "Benchmarking_Positional_Encodings_for_GNNs_and_Graph_Transformers.json",
+        "title": "Benchmarking Positional Encodings for GNNs and Graph Transformers",
+        "pdf_filename": "Benchmarking_Positional_Encodings_for_GNNs_and_Graph_Transformers.pdf"
+    },
+    {
+        "filename": "Enhancing_Reasoning_Capabilities_of_LLMs_via_Principled_Synthetic_Logic_Corpus.json",
+        "title": "Enhancing Reasoning Capabilities of LLMs via Principled Synthetic Logic Corpus",
+        "pdf_filename": "Enhancing_Reasoning_Capabilities_of_LLMs_via_Principled_Synthetic_Logic_Corpus.pdf"
+    },
+    {
+        "filename": "Large_Language_Models_for_Combinatorial_Optimization_of_Design_Structure_Matrix.json",
+        "title": "Large Language Models for Combinatorial Optimization of Design Structure Matrix",
+        "pdf_filename": "Large_Language_Models_for_Combinatorial_Optimization_of_Design_Structure_Matrix.pdf"
+    },
+    {
+        "filename": "Scaling_Deep_Learning_Research_with_Kubernetes_on_the_NRP_Nautilus_HyperCluster.json",
+        "title": "Scaling Deep Learning Research with Kubernetes on the NRP Nautilus HyperCluster",
+        "pdf_filename": "Scaling_Deep_Learning_Research_with_Kubernetes_on_the_NRP_Nautilus_HyperCluster.pdf"
+    },
+    {
+        "filename": "AIGS_Generating_Science_from_AI-Powered_Automated_Falsification.json",
+        "title": "AIGS Generating Science from AI-Powered Automated Falsification",
+        "pdf_filename": "AIGS_Generating_Science_from_AI-Powered_Automated_Falsification.pdf"
+    },
+    {
+        "filename": "CLIP_Unreasonable_Potential_in_Single-Shot_Face_Recognition.json",
+        "title": "CLIP Unreasonable Potential in Single-Shot Face Recognition",
+        "pdf_filename": "CLIP_Unreasonable_Potential_in_Single-Shot_Face_Recognition.pdf"
+    },
+    {
+        "filename": "DiM_$f$-Divergence_Minimization_Guided_Sharpness-Aware_Optimization_for_Semi-supervised_Medical_Imag.json",
+        "title": "DiM $f$-Divergence Minimization Guided Sharpness-Aware Optimization for Semi-supervised Medical Imag",
+        "pdf_filename": "DiM_$f$-Divergence_Minimization_Guided_Sharpness-Aware_Optimization_for_Semi-supervised_Medical_Imag.pdf"
+    },
+    {
+        "filename": "CSP-Net_Common_Spatial_Pattern_Empowered_Neural_Networks_for_EEG-Based_Motor_Imagery_Classification.json",
+        "title": "CSP-Net Common Spatial Pattern Empowered Neural Networks for EEG-Based Motor Imagery Classification",
+        "pdf_filename": "CSP-Net_Common_Spatial_Pattern_Empowered_Neural_Networks_for_EEG-Based_Motor_Imagery_Classification.pdf"
+    },
+    {
+        "filename": "Instant_Policy_In-Context_Imitation_Learning_via_Graph_Diffusion.json",
+        "title": "Instant Policy In-Context Imitation Learning via Graph Diffusion",
+        "pdf_filename": "Instant_Policy_In-Context_Imitation_Learning_via_Graph_Diffusion.pdf"
+    },
+    {
+        "filename": "Adapting_Amidst_Degradation_Cross_Domain_Li-ion_Battery_Health_Estimation_via_Physics-Guided_Test-Ti.json",
+        "title": "Adapting Amidst Degradation Cross Domain Li-ion Battery Health Estimation via Physics-Guided Test-Ti",
+        "pdf_filename": "Adapting_Amidst_Degradation_Cross_Domain_Li-ion_Battery_Health_Estimation_via_Physics-Guided_Test-Ti.pdf"
+    },
+    {
+        "filename": "Building_Trust_Foundations_of_Security,_Safety_and_Transparency_in_AI.json",
+        "title": "Building Trust Foundations of Security, Safety and Transparency in AI",
+        "pdf_filename": "Building_Trust_Foundations_of_Security,_Safety_and_Transparency_in_AI.pdf"
+    }
+]

@@ -1,59 +1,73 @@
 import os
 import json
+import faiss
+import numpy as np
 from fastapi import FastAPI, HTTPException
+from sentence_transformers import SentenceTransformer
 
 app = FastAPI()
 
 # Directory containing the JSON files
 JSON_DIR = "../collected-data/arxiv/json"
 
-# Load all papers from the JSON files
-def load_papers():
-    papers = []
-    try:
-        for file_name in os.listdir(JSON_DIR):
-            if file_name.endswith(".json"):
-                file_path = os.path.join(JSON_DIR, file_name)
-                with open(file_path, "r", encoding="utf-8") as file:
-                    data = json.load(file)
-                    # Handle missing fields and malformed data gracefully
-                    paper = {
-                        "id": file_name,  # Use filename as ID for simplicity
-                        "title": data.get("title", "No Title Available").strip(),
-                        "abstract": data.get("abstract", "No Abstract Available").strip(),
-                    }
-                    papers.append(paper)
-    except Exception as e:
-        print(f"Error loading papers: {e}")
-    return papers
+# Load metadata and FAISS index
+EMBEDDINGS_DIR = "../embeddings/embeddings_generated"
+FAISS_INDEX_PATH = "../embeddings/embeddings_generated/faiss_index.idx"
+EMBEDDING_MODEL_NAME = "all-MiniLM-L6-v2"
 
-papers = load_papers()
+# Load metadata
+try:
+    with open(os.path.join(EMBEDDINGS_DIR, "paper_metadata.json"), "r", encoding="utf-8") as meta_file:
+        metadata = json.load(meta_file)
+except Exception as e:
+    raise RuntimeError(f"Error loading metadata: {e}")
+
+# Load FAISS index
+try:
+    index = faiss.read_index(FAISS_INDEX_PATH)
+except Exception as e:
+    raise RuntimeError(f"Error loading FAISS index: {e}")
+
+# Load embedding model
+embedding_model = SentenceTransformer(EMBEDDING_MODEL_NAME)
 
 @app.get("/")
 def home():
     return {"message": "Welcome to the Paper Search API!"}
 
 @app.get("/search/")
-def search(query: str):
+def search(query: str, top_k: int = 5):
     """
-    Search for papers containing the query in their title or abstract.
+    Search for papers using FAISS and embeddings.
 
     Args:
-    - query: Search string from the user.
+    - query: User's search string.
+    - top_k: Number of results to return.
 
     Returns:
-    - List of papers that match the query.
+    - List of the most relevant papers based on the query.
     """
     if not query:
         raise HTTPException(status_code=400, detail="Query parameter is required.")
 
-    # Simple search logic (case-insensitive)
-    results = [
-        paper for paper in papers
-        if query.lower() in (paper["title"] or "").lower() or query.lower() in (paper["abstract"] or "").lower()
-    ]
+    try:
+        # Generate query embedding
+        query_embedding = embedding_model.encode(query).astype("float32").reshape(1, -1)
 
-    if not results:
-        raise HTTPException(status_code=404, detail="No papers found matching your query.")
+        # Search FAISS index
+        distances, indices = index.search(query_embedding, top_k)
 
-    return {"query": query, "results": results}
+        # Retrieve matching documents
+        results = [
+            {
+                "title": metadata[idx]["title"],
+                "abstract": metadata[idx].get("abstract", "No Abstract Available"),
+                "pdf_filename": metadata[idx].get("pdf_filename", "No File Available"),
+                "distance": float(dist),
+            }
+            for idx, dist in zip(indices[0], distances[0])
+        ]
+
+        return {"query": query, "results": results}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error during search: {e}")
