@@ -2,7 +2,7 @@
 FROM python:3.10-slim
 
 # Set the working directory in the container
-WORKDIR /app/api/
+WORKDIR /app/
 
 # Copy the requirements file into the container
 COPY ./api/requirements.txt .
@@ -12,7 +12,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the API folder
 COPY api /app/api/
-
+WORKDIR /app/api/
 # Copy the embeddings folder
 COPY embeddings /app/embeddings/
 
