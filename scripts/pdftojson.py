@@ -9,31 +9,41 @@ output_dir = "../collected-data/arxiv/json"
 
 os.makedirs(output_dir, exist_ok=True)
 
-def extract_abstract_from_lines(lines):
+def extract_context(lines):
     """
-    Extract abstract from a list of lines.
-    Stops when encountering a heading or keywords section.
+    Extract the 'Abstract' and 'Introduction' sections from a list of lines.
+    Stops when encountering a heading after 'Introduction'.
     """
-    abstract_lines = []
-    recording = False
+    context_lines = []
+    recording_abstract = False
+    recording_intro = False
 
     for line in lines:
+        # Start recording Abstract
         if "abstract" in line.lower():
-            recording = True
+            recording_abstract = True
             continue
 
-        if recording and (re.match(r"^\d+\.\s+[A-Z]", line) or "keywords" in line.lower()):
+        # Start recording Introduction
+        if "introduction" in line.lower() and not recording_intro:
+            recording_abstract = False
+            recording_intro = True
+            continue
+
+        # Stop recording if a new section starts
+        if recording_intro and re.match(r"^\d+\.\s+[A-Z]", line):
             break
 
-        if recording:
-            abstract_lines.append(line.strip())
+        # Record lines
+        if recording_abstract or recording_intro:
+            context_lines.append(line.strip())
 
-    return " ".join(abstract_lines).strip()
+    return " ".join(context_lines).strip()
 
 
 def extract_text_from_pdf(pdf_path):
     """
-    Extract text, title, and abstract from a PDF file using PyMuPDF.
+    Extract text, title, context, and body from a PDF file using PyMuPDF.
     """
     try:
         with fitz.open(pdf_path) as pdf:
@@ -47,8 +57,8 @@ def extract_text_from_pdf(pdf_path):
 
             lines = text.split("\n")
 
-            # Extract abstract
-            abstract = extract_abstract_from_lines(lines)
+            # Extract context (Abstract + Introduction)
+            context = extract_context(lines)
 
             # Extract full text
             full_text = ""
@@ -59,8 +69,8 @@ def extract_text_from_pdf(pdf_path):
 
             return {
                 "title": title.strip(),
-                "abstract": abstract or "",
-                "content": full_text.strip(),
+                "context": context or "",
+                "body": full_text.strip(),
                 "pdf_filename": os.path.basename(pdf_path)
             }
     except Exception as e:
@@ -77,12 +87,12 @@ def process_all_pdfs(pdf_directory, output_directory):
             pdf_path = os.path.join(pdf_directory, file_name)
             print(f"Processing: {file_name}")
             paper_data = extract_text_from_pdf(pdf_path)
-            
+
             if paper_data:
                 # Save the extracted data as a JSON file
                 json_file_name = file_name.replace(".pdf", ".json")
                 output_path = os.path.join(output_directory, json_file_name)
-                
+
                 with open(output_path, "w", encoding="utf-8") as json_file:
                     json.dump(paper_data, json_file, indent=4, ensure_ascii=False)
 
