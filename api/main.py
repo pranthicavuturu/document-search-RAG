@@ -1,161 +1,108 @@
 import os
 import json
-import faiss
 import numpy as np
-from fastapi import FastAPI, HTTPException
+import faiss
+from fastapi import FastAPI, Query
 from pydantic import BaseModel
 from sentence_transformers import SentenceTransformer
-import openai
-
-app = FastAPI()
+from transformers import T5Tokenizer, T5ForConditionalGeneration
 
 # Paths
 EMBEDDINGS_DIR = "../embeddings/embeddings_generated"
-TITLE_INDEX_PATH = os.path.join(EMBEDDINGS_DIR, "title_faiss_index.idx")
-ABSTRACT_INDEX_PATH = os.path.join(EMBEDDINGS_DIR, "chunk_faiss_index.idx")
-CONTEXT_INDEX_PATH = os.path.join(EMBEDDINGS_DIR, "context_faiss_index.idx")
-METADATA_PATH = os.path.join(EMBEDDINGS_DIR, "paper_metadata.json")
-EMBEDDING_MODEL_NAME = "all-MiniLM-L6-v2"
+FAISS_TITLE_INDEX_PATH = os.path.join(EMBEDDINGS_DIR, "faiss_title_index.index")
+FAISS_CONTEXT_INDEX_PATH = os.path.join(EMBEDDINGS_DIR, "faiss_context_index.index")
+FAISS_CHUNK_INDEX_PATH = os.path.join(EMBEDDINGS_DIR, "faiss_chunk_index.index")
+METADATA_MAPPING_PATH = os.path.join(EMBEDDINGS_DIR, "paper_metadata.json")
+CHUNK_METADATA_PATH = os.path.join(EMBEDDINGS_DIR, "chunk_metadata.json")
 
-# Load metadata
-try:
-    with open(METADATA_PATH, "r", encoding="utf-8") as meta_file:
-        metadata = json.load(meta_file)
-except Exception as e:
-    raise RuntimeError(f"Error loading metadata: {e}")
+# Load FAISS indices
+title_index = faiss.read_index(FAISS_TITLE_INDEX_PATH)
+context_index = faiss.read_index(FAISS_CONTEXT_INDEX_PATH)
+chunk_index = faiss.read_index(FAISS_CHUNK_INDEX_PATH)
 
-# Load FAISS indexes
-try:
-    title_index = faiss.read_index(TITLE_INDEX_PATH)
-    abstract_index = faiss.read_index(ABSTRACT_INDEX_PATH)
-    context_index = faiss.read_index(CONTEXT_INDEX_PATH)
-except Exception as e:
-    raise RuntimeError(f"Error loading FAISS index: {e}")
+# Load metadata with UTF-8 encoding
+with open(METADATA_MAPPING_PATH, 'r', encoding='utf-8') as f:
+    paper_metadata = json.load(f)
 
-# Load embedding model
-embedding_model = SentenceTransformer(EMBEDDING_MODEL_NAME)
+with open(CHUNK_METADATA_PATH, 'r', encoding='utf-8') as f:
+    chunk_metadata = json.load(f)
 
-# Set OpenAI API Key (ensure this is set in your environment variables)
-openai.api_key = os.getenv("OPENAI_API_KEY")
-print(openai.api_key)
+# Load SentenceTransformer model
+MODEL_NAME = "all-MiniLM-L6-v2"
+model = SentenceTransformer(MODEL_NAME)
 
-# Pydantic model for search requests
-class SearchRequest(BaseModel):
+# Load T5 model for answer generation
+t5_model_name = "google/flan-t5-large"
+tokenizer = T5Tokenizer.from_pretrained(t5_model_name)
+t5_model = T5ForConditionalGeneration.from_pretrained(t5_model_name)
+
+def generate_query_embedding(query):
+    return model.encode(query, show_progress_bar=False).reshape(1, -1)
+
+def generate_answer(question, context):
+    input_text = f"question: {question} context: {context}"
+    inputs = tokenizer(input_text, return_tensors="pt", max_length=512, truncation=True)
+    outputs = t5_model.generate(inputs.input_ids, max_length=150, num_beams=2, early_stopping=True)
+    answer = tokenizer.decode(outputs[0], skip_special_tokens=True)
+    return answer
+
+app = FastAPI()
+
+class QueryModel(BaseModel):
     query: str
-    top_k: int = 5  # Default number of results
-    field: str = "all"  # Options: "title", "abstract", "context", "all"
+    filter: str = Query("title", regex="^(title|context|chunk)$")
 
+@app.get('/search')
+def search(query: str, filter: str = Query("title")):
+    query_embedding = generate_query_embedding(query)
 
-@app.get("/")
-def home():
-    return {"message": "Welcome to the Paper Search API with RAG!"}
+    index = {
+        "title": title_index,
+        "context": context_index,
+        "chunk": chunk_index
+    }.get(filter, title_index)
 
+    distances, indices = index.search(query_embedding, k=10)
 
-@app.post("/rag/")
-def rag(request: SearchRequest):
-    print("rag request")
-    """
-    Retrieval-Augmented Generation (RAG) endpoint.
-    1. Search for relevant documents.
-    2. Generate a response using GPT based on the query and retrieved documents.
-    """
-    query = request.query
-    top_k = request.top_k
-    field = request.field
+    results = []
+    contexts = []
 
-    if not query:
-        raise HTTPException(status_code=400, detail="Query parameter is required.")
+    if filter == "chunk":
+        chunk_embeddings_flat = np.load(os.path.join(EMBEDDINGS_DIR, "chunk_embeddings.npy"))
+        for i, distance in zip(indices[0], distances[0]):
+            try:
+                chunk_info = chunk_metadata[i]
+                doc_id = chunk_info["doc_id"]
+                start_idx = chunk_info["start_idx"]
+                end_idx = chunk_info["end_idx"]
+                chunk_context = " ".join(chunk_embeddings_flat[start_idx:end_idx])
+                relevance_score = 1 / (1 + distance)  # Transform distance to a relevance score
+                results.append({
+                    "title": paper_metadata[doc_id]["title"],
+                    "relevance_score": relevance_score
+                })
+                contexts.append(chunk_context)
+            except IndexError:
+                print(f"IndexError: Skipping index {i} which is out of range for chunk_metadata or paper_metadata")
+    else:
+        for i, distance in zip(indices[0], distances[0]):
+            try:
+                result = paper_metadata[i]
+                relevance_score = 1 / (1 + distance)  # Transform distance to a relevance score
+                results.append({
+                    "title": result["title"],
+                    "relevance_score": relevance_score
+                })
+                contexts.append(result[filter])
+            except IndexError:
+                print(f"IndexError: Skipping index {i} which is out of range for paper_metadata")
 
-    try:
-        # Step 1: Retrieve relevant documents
-        query_embedding = embedding_model.encode(query).astype("float32").reshape(1, -1)
+    # Concatenate contexts for answer generation
+    combined_context = " ".join(contexts)
+    answer = generate_answer(query, combined_context)
 
-        # Perform FAISS search based on the selected field
-        if field == "title":
-            distances, indices = title_index.search(query_embedding, top_k)
-            retrieved_docs = _format_results(indices, distances, metadata, "title")
-        elif field == "abstract":
-            distances, indices = abstract_index.search(query_embedding, top_k)
-            retrieved_docs = _format_results(indices, distances, metadata, "abstract")
-        elif field == "context":
-            distances, indices = context_index.search(query_embedding, top_k)
-            retrieved_docs = _format_results(indices, distances, metadata, "context")
-        elif field == "all":
-            # Search across all fields
-            title_distances, title_indices = title_index.search(query_embedding, top_k)
-            abstract_distances, abstract_indices = abstract_index.search(query_embedding, top_k)
-            context_distances, context_indices = context_index.search(query_embedding, top_k)
+    return {"results": results, "answer": answer}
 
-            retrieved_docs = _combine_results(
-                title_indices, title_distances,
-                abstract_indices, abstract_distances,
-                context_indices, context_distances,
-                metadata
-            )
-        else:
-            raise HTTPException(status_code=400, detail="Invalid field specified.")
-
-        # Step 2: Construct context for GPT
-        context = "\n\n".join(
-            [f"Title: {doc['title']}\nAbstract: {doc['abstract']}" for doc in retrieved_docs]
-        )
-        messages = [
-            {"role": "system", "content": "You are an expert in document summarization and retrieval."},
-            {"role": "user", "content": f"Query: {query}\n\nContext: {context}\n\nGenerate a concise and informative response."},
-        ]
-
-        # Step 3: Generate response using GPT
-        response = openai.ChatCompletion.create(
-            model="gpt-4",  # Replace with "gpt-3.5-turbo" if needed
-            messages=messages,
-            max_tokens=300,
-            temperature=0.7,
-        )
-        generated_response = response["choices"][0]["message"]["content"].strip()
-
-        return {"query": query, "generated_response": generated_response, "documents": retrieved_docs}
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Error during RAG process: {e}")
-
-
-def _format_results(indices, distances, metadata, field_name):
-    """
-    Format results for a single field.
-    """
-    return [
-        {
-            "field": field_name,
-            "title": metadata[idx]["title"],
-            "abstract": metadata[idx].get("abstract", "No Abstract Available"),
-            "pdf_filename": metadata[idx].get("pdf_filename", "No File Available"),
-            "distance": float(dist),
-        }
-        for idx, dist in zip(indices[0], distances[0])
-    ]
-
-
-def _combine_results(title_indices, title_distances, abstract_indices, abstract_distances,
-                     context_indices, context_distances, metadata):
-    """
-    Combine results from multiple fields.
-    """
-    combined_results = []
-
-    def append_results(indices, distances, field_name):
-        for idx, dist in zip(indices[0], distances[0]):
-            combined_results.append({
-                "field": field_name,
-                "title": metadata[idx]["title"],
-                "abstract": metadata[idx].get("abstract", "No Abstract Available"),
-                "pdf_filename": metadata[idx].get("pdf_filename", "No File Available"),
-                "distance": float(dist),
-            })
-
-    append_results(title_indices, title_distances, "title")
-    append_results(abstract_indices, abstract_distances, "abstract")
-    append_results(context_indices, context_distances, "context")
-
-    # Sort by distance (relevance)
-    combined_results = sorted(combined_results, key=lambda x: x["distance"])
-
-    return combined_results[:10]  # Return top 10 combined results
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)

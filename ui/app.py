@@ -1,57 +1,28 @@
 import streamlit as st
 import requests
 
-# Backend API URL
-API_URL = "http://127.0.0.1:8000"
+st.title("Document Search")
 
-# Streamlit UI setup
-st.set_page_config(page_title="Document Search with RAG", layout="wide")
+# Input fields for query and filter
+query = st.text_input("Enter your query:")
+filter = st.selectbox("Filter by:", ["title", "context", "chunk"])
 
-st.title("Document Search with RAG")
-st.markdown("Search academic papers and generate AI-powered responses.")
+if st.button("Search"):
+    response = requests.get("http://localhost:8000/search", params={"query": query, "filter": filter})
 
-# Sidebar parameters
-st.sidebar.header("Search Parameters")
-query = st.sidebar.text_input("Enter Search Query", "")
-top_k = st.sidebar.slider("Number of Results", 1, 10, 5)
-field = st.sidebar.selectbox("Search Field", ["all", "title", "abstract", "context"])
+    if response.status_code == 200:
+        results = response.json().get("results", [])
+        answer = response.json().get("answer", "")
 
-if st.sidebar.button("Search"):
-    with st.spinner("Retrieving results and generating response..."):
-        try:
-            # Payload for the API
-            payload = {"query": query, "top_k": top_k, "field": field}
-            response = requests.post(f"{API_URL}/rag/", json=payload)
+        st.subheader("Generated Response")
+        st.write(answer)
 
-            if response.status_code == 200:
-                # Extract data from the response
-                data = response.json()
-                generated_response = data.get("generated_response", "No response generated.")
-                documents = data.get("documents", [])
-
-                # Display AI-generated response
-                st.subheader("AI-Generated Response")
-                st.markdown(f"**Generated Response:**\n\n{generated_response}")
-
-                # Display relevant documents
-                st.subheader(f"Search Results (Field: {data['field']})")
-                if documents:
-                    for doc in documents:
-                        st.markdown(
-                            f"**Field**: {doc['field']}  \n"
-                            f"**Title**: {doc['title']}  \n"
-                            f"**Abstract**: {doc['abstract']}  \n"
-                            f"**PDF File**: {doc['pdf_filename']}  \n"
-                            f"**Relevance Score**: {doc['distance']:.4f}  \n"
-                            f"---"
-                        )
-                else:
-                    st.warning("No documents found.")
-            else:
-                st.error(f"Error: {response.status_code} - {response.json().get('detail', 'Unknown error')}")
-
-        except Exception as e:
-            st.error(f"Failed to connect to the backend: {e}")
-
-st.markdown("---")
-st.markdown("Powered by [Streamlit](https://streamlit.io) and [FastAPI](https://fastapi.tiangolo.com).")
+        if results:
+            st.subheader("Search Results")
+            for result in results:
+                st.write(f"Title: {result['title']}")
+                st.write(f"Relevance Score: {result['relevance_score']:.4f}")
+        else:
+            st.write("No results found.")
+    else:
+        st.write("Error: Unable to fetch results from the backend.")
