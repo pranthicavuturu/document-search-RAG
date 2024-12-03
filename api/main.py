@@ -56,52 +56,54 @@ class QueryModel(BaseModel):
 def search(query: str, filter: str = Query("title")):
     query_embedding = generate_query_embedding(query)
 
+    # Select appropriate FAISS index
     index = {
         "title": title_index,
         "context": context_index,
         "chunk": chunk_index
     }.get(filter, title_index)
 
+    # Perform FAISS search
     distances, indices = index.search(query_embedding, k=10)
 
     results = []
     contexts = []
 
+    # Process results based on the filter type
     if filter == "chunk":
-        chunk_embeddings_flat = np.load(os.path.join(EMBEDDINGS_DIR, "chunk_embeddings.npy"))
         for i, distance in zip(indices[0], distances[0]):
             try:
                 chunk_info = chunk_metadata[i]
                 doc_id = chunk_info["doc_id"]
-                start_idx = chunk_info["start_idx"]
-                end_idx = chunk_info["end_idx"]
-                chunk_context = " ".join(chunk_embeddings_flat[start_idx:end_idx])
-                relevance_score = 1 / (1 + distance)  # Transform distance to a relevance score
+                chunk_texts = chunk_info["chunks"]  # Retrieve chunk texts
+                chunk_context = " ".join(chunk_texts)
+                relevance_score = 1 / (1 + distance)  # Transform distance to relevance score
                 results.append({
                     "title": paper_metadata[doc_id]["title"],
                     "relevance_score": relevance_score
                 })
                 contexts.append(chunk_context)
-            except IndexError:
-                print(f"IndexError: Skipping index {i} which is out of range for chunk_metadata or paper_metadata")
+            except (IndexError, KeyError) as e:
+                print(f"Error retrieving chunk metadata: {e}")
     else:
         for i, distance in zip(indices[0], distances[0]):
             try:
                 result = paper_metadata[i]
-                relevance_score = 1 / (1 + distance)  # Transform distance to a relevance score
+                relevance_score = 1 / (1 + distance)  # Transform distance to relevance score
                 results.append({
                     "title": result["title"],
                     "relevance_score": relevance_score
                 })
-                contexts.append(result[filter])
-            except IndexError:
-                print(f"IndexError: Skipping index {i} which is out of range for paper_metadata")
+                contexts.append(result.get(filter, ""))  # Get the filtered field
+            except (IndexError, KeyError) as e:
+                print(f"Error retrieving paper metadata: {e}")
 
     # Concatenate contexts for answer generation
     combined_context = " ".join(contexts)
     answer = generate_answer(query, combined_context)
 
     return {"results": results, "answer": answer}
+
 
 if __name__ == "__main__":
     import uvicorn

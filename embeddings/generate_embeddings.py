@@ -21,6 +21,7 @@ metadata = []
 def chunk_text(text, max_chunk_size=200):
     """
     Split the text into smaller chunks based on paragraphs or max character size.
+
     Args:
     - text: The body text to split.
     - max_chunk_size: The maximum number of characters per chunk.
@@ -62,18 +63,19 @@ def process_json_files(json_dir):
                     # Load JSON content
                     paper_data = json.load(file)
 
-                    # Extract title and abstract
+                    # Extract title, context, and body
                     title = paper_data.get("title", "").strip()
                     context = paper_data.get("context", "").strip()
                     body = paper_data.get("body", "").strip()
 
-                    # Generate embeddings
+                    # Generate embeddings for title
                     if title:
                         title_embedding = model.encode(title, show_progress_bar=False)
                         title_embeddings.append(title_embedding)
                     else:
                         title_embeddings.append(np.zeros(model.get_sentence_embedding_dimension()))
 
+                    # Generate embeddings for context
                     if context:
                         context_embedding = model.encode(context, show_progress_bar=False)
                         context_embeddings.append(context_embedding)
@@ -81,6 +83,8 @@ def process_json_files(json_dir):
                         context_embeddings.append(np.zeros(model.get_sentence_embedding_dimension()))
 
                     # Generate body chunk embeddings
+                    chunks = []
+                    chunk_embedding_list = []
                     if body:
                         chunks = chunk_text(body)
                         chunk_embedding_list = model.encode(chunks, show_progress_bar=True)
@@ -88,14 +92,14 @@ def process_json_files(json_dir):
                     else:
                         chunk_embeddings.append([])
 
-                    # Save metadata
+                    # Save metadata for the document
                     metadata.append({
                         "title": title,
                         "context": context,
                         "pdf_filename": paper_data.get("pdf_filename", ""),
-                        "num_chunks": len(chunk_embeddings[-1]),  # Track the number of chunks
+                        "num_chunks": len(chunk_embedding_list),  # Number of chunks
+                        "chunks": chunks  # Save actual chunk texts for reconstruction
                     })
-
 
                 except Exception as e:
                     print(f"Error processing file {file_name}: {e}")
@@ -123,10 +127,12 @@ for doc_id, doc_chunks in enumerate(chunk_embeddings):
     chunk_metadata.append({
         "doc_id": doc_id,
         "start_idx": current_offset,
-        "end_idx": current_offset + len(doc_chunks)
+        "end_idx": current_offset + len(doc_chunks),
+        "chunks": metadata[doc_id]["chunks"]  # Add chunk texts to metadata
     })
     current_offset += len(doc_chunks)
 
+# Save metadata to JSON files
 with open(os.path.join(EMBEDDINGS_DIR, "chunk_metadata.json"), "w", encoding="utf-8") as chunk_meta_file:
     json.dump(chunk_metadata, chunk_meta_file, indent=4, ensure_ascii=False)
 
