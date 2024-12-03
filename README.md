@@ -97,7 +97,7 @@ This project provides a system to search academic papers using a FastAPI backend
 Run the following command to install the required libraries:
 
 ```bash
-pip install fastapi uvicorn streamlit requests
+pip install fastapi uvicorn streamlit requests faiss-cpu sentence-transformers
 ```
 
 ---

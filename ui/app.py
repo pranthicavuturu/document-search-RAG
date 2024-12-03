@@ -1,47 +1,46 @@
 import streamlit as st
 import requests
+import json
 
-API_URL = "http://127.0.0.1:8000"
+# Load the JSON file to create a mapping of titles to links
+link_file_path = "../embeddings/embeddings_generated/links.json"
+with open(link_file_path, 'r') as file:
+    link_data = json.load(file)
 
-st.set_page_config(page_title="Document Search with RAG", layout="wide")
+# Create a dictionary mapping titles to links
+title_to_link = {item['title']: item['link'] for item in link_data}
 
-st.title("Document Search with RAG")
-st.markdown("Search academic papers and get AI-generated insights.")
+st.title("Document Search")
 
-st.sidebar.header("Search Parameters")
-query = st.sidebar.text_input("Enter Search Query", "")
-top_k = st.sidebar.slider("Number of Results", 1, 10, 5)
+# Input fields for query and filter
+query = st.text_input("Enter your query:")
+filter = st.selectbox("Filter by:", ["title", "context", "abstract"])
 
-if st.sidebar.button("Search"):
-    with st.spinner("Retrieving and generating response..."):
-        try:
-            # Send request to the backend
-            payload = {"query": query, "top_k": top_k}
-            response = requests.post(f"{API_URL}/rag/", json=payload)
+if st.button("Search"):
+    # Make a request to the backend search endpoint
+    response = requests.get("http://localhost:8000/search", params={"query": query, "filter": filter})
 
-            if response.status_code == 200:
-                data = response.json()
-                generated_response = data.get("generated_response", "No response generated.")
-                documents = data.get("documents", [])
+    if response.status_code == 200:
+        # Parse the response
+        results = response.json().get("results", [])
+        answer = response.json().get("answer", "")
 
-                # Display generated response
-                st.subheader("Generated Response")
-                st.markdown(generated_response)
+        # Display generated response
+        st.subheader("Generated Response")
+        st.write(answer)
 
-                # Display relevant documents
-                st.subheader("Relevant Documents")
-                for doc in documents:
-                    st.markdown(
-                        f"**Title**: {doc['title']}  \n"
-                        f"**Abstract**: {doc['abstract']}  \n"
-                        f"**PDF File**: {doc['pdf_filename']}  \n"
-                        f"**Relevance Score**: {doc['distance']:.4f}  \n"
-                        f"---"
-                    )
-            else:
-                st.error(f"Error: {response.status_code} - {response.json().get('detail', 'Unknown error')}")
-        except Exception as e:
-            st.error(f"Failed to connect to the backend: {e}")
+        if results:
+            st.subheader("Search Results")
+            # Display the search results with titles and corresponding links
+            for result in results:
+                title = result['title']
+                link = title_to_link.get(title, "Link not available")
 
-st.markdown("---")
-st.markdown("Powered by [Streamlit](https://streamlit.io), [FastAPI](https://fastapi.tiangolo.com), and GPT.")
+                # Display title and link
+                st.write(f"Title: {title}")
+                st.write(f"Link: {link}")
+                st.write("---")  # A line separator for better readability
+        else:
+            st.write("No results found.")
+    else:
+        st.write("Error: Unable to fetch results from the backend.")
