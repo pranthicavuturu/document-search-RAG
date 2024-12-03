@@ -8,9 +8,9 @@ from sentence_transformers import SentenceTransformer
 from transformers import T5Tokenizer, T5ForConditionalGeneration
 
 EMBEDDINGS_DIR = "../embeddings/embeddings_generated"
-FAISS_TITLE_INDEX_PATH = os.path.join(EMBEDDINGS_DIR, "faiss_title_index.index")
-FAISS_CONTEXT_INDEX_PATH = os.path.join(EMBEDDINGS_DIR, "faiss_context_index.index")
-FAISS_CHUNK_INDEX_PATH = os.path.join(EMBEDDINGS_DIR, "faiss_chunk_index.index")
+FAISS_TITLE_INDEX_PATH = os.path.join(EMBEDDINGS_DIR, "title_faiss_index.idx")
+FAISS_CONTEXT_INDEX_PATH = os.path.join(EMBEDDINGS_DIR, "context_faiss_index.idx")
+FAISS_CHUNK_INDEX_PATH = os.path.join(EMBEDDINGS_DIR, "chunk_faiss_index.idx")
 METADATA_MAPPING_PATH = os.path.join(EMBEDDINGS_DIR, "paper_metadata.json")
 CHUNK_METADATA_PATH = os.path.join(EMBEDDINGS_DIR, "chunk_metadata.json")
 

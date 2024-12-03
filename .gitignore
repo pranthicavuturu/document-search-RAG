@@ -1,5 +1,5 @@
 # Ignore generated embedding files
 embeddings/embeddings_generated/chunk_embeddings.npy
 embeddings/embeddings_generated/chunk_metadata.json
-embeddings/embeddings_generated/faiss_chunk_index.index
+embeddings/embeddings_generated/chunk_faiss_index.idx
 document-search-RAG/api/__pycache__
