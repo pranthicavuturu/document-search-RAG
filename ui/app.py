@@ -24,7 +24,7 @@ st.markdown(
     .title {
         font-size: 2.5rem;
         font-weight: bold;
-        color: #333333;
+        color: #FFFFFF; /* Updated to white for better visibility */
     }
     /* Subheader style */
     .subheader {
@@ -53,7 +53,7 @@ st.markdown(
 with st.sidebar:
     logo_path = "logo.png"
     if os.path.exists(logo_path):
-        st.image(logo_path, use_column_width=True)
+        st.image(logo_path, use_container_width=True)
     else:
         st.write(" ")
     st.title("Document Search Tool")
@@ -139,7 +139,7 @@ if st.button("Search"):
                             text='title',
                             color='title',
                             title='Embeddings Visualization',
-                            color_discrete_sequence=px.colors.qualitative.Set1,  # Use a professional color palette
+                            color_discrete_sequence=px.colors.qualitative.Set1,
                         )
 
                         fig.update_traces(marker=dict(size=6, symbol='circle', opacity=0.7))
@@ -173,4 +173,4 @@ if st.button("Search"):
                 st.error(f"Error connecting to the backend: {e}")
 
 st.markdown("---")
-st.markdown("🔗 Built with [Streamlit](https://streamlit.io) | Backend by [FastAPI](https://fastapi.tiangolo.com). | Flan-T5 ")
+st.markdown("🔗 Built with [Streamlit](https://streamlit.io) | Backend by [FastAPI](https://fastapi.tiangolo.com) | Google/Flan-T5 ")
