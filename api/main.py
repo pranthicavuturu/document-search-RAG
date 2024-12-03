@@ -96,7 +96,7 @@ def search(query: str, filter: str = Query("title")):
                 doc_id = chunk_info["doc_id"]
                 chunk_texts = chunk_info["chunks"]
                 chunk_context = " ".join(chunk_texts)
-                relevance_score = 1 / (1 + distance)
+                relevance_score = float(1 / (1 + distance))
                 title = paper_metadata[doc_id]["title"]
                 link = title_to_link.get(title, "Link not available")
                 results.append({
@@ -114,7 +114,7 @@ def search(query: str, filter: str = Query("title")):
         for i, distance in zip(indices[0], distances[0]):
             try:
                 result = paper_metadata[i]
-                relevance_score = 1 / (1 + distance)
+                relevance_score = float(1 / (1 + distance))
                 title = result["title"]
                 link = title_to_link.get(title, "Link not available")
                 results.append({

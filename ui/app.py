@@ -93,7 +93,7 @@ if st.button("Search"):
         with st.spinner("Searching for results..."):
             try:
                 # Make a request to the backend
-                response = requests.get("http://localhost:8000/search", params={"query": query, "filter": filter})
+                response = requests.get("http://backend:8000/search", params={"query": query, "filter": filter})
                 if response.status_code == 200:
                     data = response.json()
                     results = data.get("results", [])
