@@ -1,5 +1,13 @@
 # Document Search Using RAG
 
+### Run this project from root directory using:
+
+```console
+docker-compose up --build
+```
+
+You must have docker installed for this.
+
 ## Overview
 This project allows users to search academic papers using vector similarity search and embeddings.
 
