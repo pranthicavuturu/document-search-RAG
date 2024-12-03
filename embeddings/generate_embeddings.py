@@ -3,16 +3,13 @@ import json
 import numpy as np
 from sentence_transformers import SentenceTransformer
 
-# Paths
 JSON_DIR = "../collected-data/arxiv/json"
 EMBEDDINGS_DIR = "../embeddings/embeddings_generated"
 os.makedirs(EMBEDDINGS_DIR, exist_ok=True)
 
-# Initialize embedding model
 MODEL_NAME = "all-MiniLM-L6-v2"
 model = SentenceTransformer(MODEL_NAME)
 
-# Storage for embeddings and metadata
 title_embeddings = []
 context_embeddings = []
 chunk_embeddings = []
@@ -107,20 +104,16 @@ def process_json_files(json_dir):
     return metadata, title_embeddings, context_embeddings, chunk_embeddings
 
 
-# Process JSON files and generate embeddings
 print("Generating embeddings for titles and contexts...")
 metadata, title_embeddings, context_embeddings, chunk_embeddings = process_json_files(JSON_DIR)
 
-# Save embeddings and metadata
 print("Saving embeddings and metadata...")
 np.save(os.path.join(EMBEDDINGS_DIR, "title_embeddings.npy"), np.array(title_embeddings))
 np.save(os.path.join(EMBEDDINGS_DIR, "context_embeddings.npy"), np.array(context_embeddings))
 
-# Save chunk embeddings separately since they have varying lengths
 chunk_embeddings_flat = [embedding for doc in chunk_embeddings for embedding in doc]
 np.save(os.path.join(EMBEDDINGS_DIR, "chunk_embeddings.npy"), np.array(chunk_embeddings_flat))
 
-# Save chunk metadata for reconstruction
 chunk_metadata = []
 current_offset = 0
 for doc_id, doc_chunks in enumerate(chunk_embeddings):
@@ -132,7 +125,6 @@ for doc_id, doc_chunks in enumerate(chunk_embeddings):
     })
     current_offset += len(doc_chunks)
 
-# Save metadata to JSON files
 with open(os.path.join(EMBEDDINGS_DIR, "chunk_metadata.json"), "w", encoding="utf-8") as chunk_meta_file:
     json.dump(chunk_metadata, chunk_meta_file, indent=4, ensure_ascii=False)
 

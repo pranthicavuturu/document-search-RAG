@@ -3,7 +3,6 @@ import fitz  # PyMuPDF
 import json
 import re
 
-# Paths
 pdf_dir = "../collected-data/arxiv/pdf"
 output_dir = "../collected-data/arxiv/json"
 
@@ -19,22 +18,18 @@ def extract_context(lines):
     recording_intro = False
 
     for line in lines:
-        # Start recording Abstract
         if "abstract" in line.lower():
             recording_abstract = True
             continue
 
-        # Start recording Introduction
         if "introduction" in line.lower() and not recording_intro:
             recording_abstract = False
             recording_intro = True
             continue
 
-        # Stop recording if a new section starts
         if recording_intro and re.match(r"^\d+\.\s+[A-Z]", line):
             break
 
-        # Record lines
         if recording_abstract or recording_intro:
             context_lines.append(line.strip())
 
@@ -50,17 +45,16 @@ def extract_text_from_pdf(pdf_path):
             first_page = pdf[0]
             text = first_page.get_text("text")
 
-            # Handle cases where the first page has no text
+            # handle cases where the first page has no text
             if not text.strip():
                 print(f"Warning: No text found on the first page of {pdf_path}")
                 return None
 
             lines = text.split("\n")
 
-            # Extract context (Abstract + Introduction)
             context = extract_context(lines)
 
-            # Extract full text
+            # extract full text
             full_text = ""
             for page in pdf:
                 full_text += page.get_text("text") + "\n"
