@@ -81,7 +81,11 @@ pip install fastapi uvicorn streamlit requests faiss-cpu sentence-transformers
 
 ### 5. Contributions
 
-1.
+1. Scripts- Sai Pramod Bhupathi
+2. Ui- ​Sai Kiran Kalluri
+3. Embeddings- Rohith Ganni
+4. Deployment- Hussain Manasi
+5. RAG- Pranthi Cavuturu
 
 ## Troubleshooting
 
